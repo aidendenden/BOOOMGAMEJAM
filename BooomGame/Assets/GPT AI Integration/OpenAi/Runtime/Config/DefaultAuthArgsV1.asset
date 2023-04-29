@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cfa4d983a7d91419ea8999b972a333, type: 3}
   m_Name: DefaultAuthArgsV1
   m_EditorClassIdentifier: 
-  AuthType: 0
-  PrivateApiKey: 
+  AuthType: 1
+  PrivateApiKey: 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
   Organization: 
