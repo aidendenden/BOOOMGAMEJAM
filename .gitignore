@@ -3,6 +3,7 @@ BooomGame/Temp
 BooomGame/.vs
 BooomGame/obj
 BooomGame/Logs
+BooomGame/obj
 BooomGame/.idea
 BooomGame/Logs
 BooomGame/Logs
@@ -10,3 +11,4 @@ BooomGame/UserSettings
 BooomGame/Logs
 BooomGame/obj
 BooomGame/Assets/GPT AI Integration/OpenAi/Runtime/Config/DefaultAuthArgsV1.asset
+BooomGame/UserSettings
