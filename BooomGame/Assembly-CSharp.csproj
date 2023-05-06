@@ -119,6 +119,7 @@
      <Folder Include="Assets\GPT AI Integration\Demo Scripts\AI Shader" />
      <Folder Include="Assets\GPT AI Integration\NAudio\libs" />
      <Folder Include="Assets\GPT AI Integration\Demo Scripts\AI Shader\Materials" />
+     <Folder Include="Assets\Resources" />
      <Folder Include="Assets\GPT AI Integration\ElevenLabs\Runtime" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\TextMesh Pro" />
@@ -449,6 +450,9 @@
      </Reference>
      <Reference Include="NAudio.WinMM">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Assets\GPT AI Integration\NAudio\libs\NAudio.WinMM.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>D:\UnityEditor\2021.3.24f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -1834,6 +1838,10 @@
     <ProjectReference Include="openai.api.unity.editor.csproj">
       <Project>{0AF338F0-6DBE-25B8-D18D-40FF42EB0641}</Project>
       <Name>openai.api.unity.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="DOTween.Modules.csproj">
+      <Project>{5527fa71-7da6-0bf8-103e-d0d5434af372}</Project>
+      <Name>DOTween.Modules</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

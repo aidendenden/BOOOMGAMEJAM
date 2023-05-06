@@ -379,6 +379,12 @@
      <Reference Include="NAudio.WinMM">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Assets\GPT AI Integration\NAudio\libs\NAudio.WinMM.dll</HintPath>
      </Reference>
+     <Reference Include="DOTweenEditor">
+     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="nunit.framework">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
