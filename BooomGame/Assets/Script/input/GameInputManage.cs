@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,14 +8,29 @@ public class GameInputManage : MonoBehaviour
 {
     public float speed = 5f;
     private Vector2 moveInput;
+    private Rigidbody2D playerRig;
+
+    private void Start()
+    {
+        if (transform.TryGetComponent<Rigidbody2D>(out playerRig))
+        {
+            Debug.Log("Found Rigidbody component: " + playerRig.name);
+        }
+        else
+        {
+            Debug.Log("Could not find Rigidbody component");
+        }
+    }
 
     void Update()
     {
         Vector3 position = transform.position;
+        
         position.x += moveInput.x * speed * Time.deltaTime;
         position.y += moveInput.y * speed * Time.deltaTime;
-        transform.position = position;
 
+        playerRig.MovePosition(position);
+        
         if (moveInput.x > 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
