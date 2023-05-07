@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GameInputManage : MonoBehaviour
+public class AidenGameInputManage : MonoBehaviour
 {
     public float speed = 5f;
     private Vector3 moveInput;

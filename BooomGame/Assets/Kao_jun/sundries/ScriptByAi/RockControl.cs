@@ -11,10 +11,6 @@ public class RockControl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
-
-
-
     public void Test_SayHI(InputAction.CallbackContext ctx)
     {
         
