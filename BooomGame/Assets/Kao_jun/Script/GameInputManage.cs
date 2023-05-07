@@ -27,18 +27,11 @@ public class GameInputManage : MonoBehaviour
         Vector3 position = transform.position;
         
         position.x += moveInput.x * speed * Time.deltaTime;
-        position.y += moveInput.y * speed * Time.deltaTime;
+        position.z += moveInput.y * speed * Time.deltaTime;//暂时是在zx平面上移动
 
         playerRig.MovePosition(position);
         
-        if (moveInput.x > 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (moveInput.x < 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
+  
     }
 
     public void OnMove(InputAction.CallbackContext context)

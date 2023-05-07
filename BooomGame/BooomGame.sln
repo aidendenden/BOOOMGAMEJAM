@@ -5,6 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openai.api.unity", "openai.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{59041832-F3D0-D8D4-5B01-A5CD89260E78}"
 EndProject
+<<<<<<< Updated upstream
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{7326BED1-902A-1083-E3F8-4F411F15AA04}"
+EndProject
+>>>>>>> Stashed changes
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{d1be2673-2a90-8310-e3f8-4f411f15aa04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openai.api.unity.editor", "openai.api.unity.editor.csproj", "{f038f30a-be6d-b825-d18d-40ff42eb0641}"
@@ -38,6 +43,13 @@ Global
 		{59041832-F3D0-D8D4-5B01-A5CD89260E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59041832-F3D0-D8D4-5B01-A5CD89260E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59041832-F3D0-D8D4-5B01-A5CD89260E78}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< Updated upstream
+=======
+		{7326BED1-902A-1083-E3F8-4F411F15AA04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7326BED1-902A-1083-E3F8-4F411F15AA04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7326BED1-902A-1083-E3F8-4F411F15AA04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7326BED1-902A-1083-E3F8-4F411F15AA04}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> Stashed changes
 		{0AF338F0-6DBE-25B8-D18D-40FF42EB0641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0AF338F0-6DBE-25B8-D18D-40FF42EB0641}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AF338F0-6DBE-25B8-D18D-40FF42EB0641}.Release|Any CPU.ActiveCfg = Release|Any CPU
