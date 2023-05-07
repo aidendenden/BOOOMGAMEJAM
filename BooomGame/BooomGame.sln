@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openai.api.unity", "openai.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{59041832-F3D0-D8D4-5B01-A5CD89260E78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openai.api.unity.editor", "openai.api.unity.editor.csproj", "{0AF338F0-6DBE-25B8-D18D-40FF42EB0641}"
+EndProject
 <<<<<<< Updated upstream
 =======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{7326BED1-902A-1083-E3F8-4F411F15AA04}"
