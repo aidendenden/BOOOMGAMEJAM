@@ -69,7 +69,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\GPT AI Integration\ElevenLabs\Configuration\ELAuthArgsV1.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
-     <Compile Include="Assets\Script\input\GameInputManage.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -85,7 +84,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-     <Compile Include="Assets\Script\basic\GameManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
@@ -98,6 +96,8 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+     <Compile Include="Assets\Script\basic\GameManager.cs" />
+     <Compile Include="Assets\Script\input\GameInputManage.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Sprites" />
@@ -434,8 +434,8 @@
      <Reference Include="Unity.Burst.Cecil">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
-     <Reference Include="DOTween">
-     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     <Reference Include="Unity.Burst.Cecil.Rocks">
+     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -449,11 +449,11 @@
      <Reference Include="NAudio.Core">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Assets\GPT AI Integration\NAudio\libs\NAudio.Core.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
-     </Reference>
      <Reference Include="NAudio.WinMM">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Assets\GPT AI Integration\NAudio\libs\NAudio.WinMM.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>D:\UnityEditor\2021.3.24f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -881,8 +881,8 @@
      <Reference Include="Unity.2D.Psdimporter.Editor">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <Reference Include="Unity.Postprocessing.Editor">
+     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -902,8 +902,8 @@
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -923,8 +923,14 @@
      <Reference Include="com.unity.cinemachine.editor">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Postprocessing.Runtime">
+     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.InternalAPIEditorBridge.001">
+     <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
      <HintPath>D:\fork\BOOOMGAMEJAM\BooomGame\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
