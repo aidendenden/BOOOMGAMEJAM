@@ -30,8 +30,7 @@ public class GameInputManage_K : MonoBehaviour
         position.z += moveInput.y * speed * Time.deltaTime;//暂时是在zx平面上移动
 
         playerRig.MovePosition(position);
-        
-  
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
