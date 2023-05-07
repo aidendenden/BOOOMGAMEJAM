@@ -23,3 +23,6 @@ BooomGame/.vs
 BooomGame/.idea
 BooomGame/Assembly-CSharp.csproj
 BooomGame/BooomGame.sln
+BooomGame/Assembly-CSharp-firstpass.csproj
+BooomGame/openai.api.unity.csproj
+BooomGame/openai.api.unity.editor.csproj
