@@ -3,7 +3,7 @@
 //csharp
 using UnityEngine;
 
-public class RotateObject : MonoBehaviour
+public class RotateObject_K : MonoBehaviour
 {
     public float rotationSpeed = 10f;
 
