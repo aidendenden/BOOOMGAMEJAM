@@ -53,14 +53,12 @@ public class GameInputManage_K : MonoBehaviour
     }
  
 
-
-
-
-
-
-
     private void WalkAnimationController_K()//这个是给主角判断动画的
     {
+        if (!_animator)
+        {
+            return;
+        }
         if (moveInput != Vector3.zero)
         {
             _animator.SetBool("isRuning", true);
