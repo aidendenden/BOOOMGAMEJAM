@@ -9,7 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: TEST
   m_Shader: {fileID: 4800000, guid: ba7bb939ef27f4e45b72895dffe3061d, type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _UseAlphaClipping
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -73,7 +74,7 @@ Material:
     - _OutlineZOffsetMaskRemapStart: 0
     - _ReceiveShadowMappingAmount: 0.65
     - _ReceiveShadowMappingPosOffset: 0
-    - _UseAlphaClipping: 0
+    - _UseAlphaClipping: 1
     - _UseEmission: 0
     - _UseOcclusion: 0
     m_Colors:
