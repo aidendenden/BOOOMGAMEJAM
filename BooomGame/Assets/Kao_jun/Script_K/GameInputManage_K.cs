@@ -10,6 +10,7 @@ public class GameInputManage_K : MonoBehaviour
     private Vector3 moveInput;
     private Rigidbody playerRig;
     private Animator _animator;
+    private AudioSource _audioSource;
     private float StopX_k, StopY_k;//用于储存输入的方向传给animator中判断方向
 
     private void Start()
@@ -21,10 +22,21 @@ public class GameInputManage_K : MonoBehaviour
         else
         {
             Debug.Log("Could not find Rigidbody component");
+
         }
 
 
-        if(GameObject.FindGameObjectWithTag("Player").TryGetComponent<Animator>(out _animator))
+        if (transform.TryGetComponent<AudioSource>(out _audioSource))
+        {
+            Debug.Log("Found AudioSource component: " + _audioSource.name);
+        }
+        else
+        {
+            Debug.Log("Could not find AudioSource component");
+
+        }
+
+        if (GameObject.FindGameObjectWithTag("Player").TryGetComponent<Animator>(out _animator))
         {
             Debug.Log("Found Animator component: " + _animator.name);
         }
@@ -61,6 +73,11 @@ public class GameInputManage_K : MonoBehaviour
         }
         if (moveInput != Vector3.zero)
         {
+
+            if(_audioSource.isActiveAndEnabled == false)
+            {
+                _audioSource.enabled = true;
+            }
             _animator.SetBool("isRuning", true);
             StopX_k = moveInput.x;
             StopY_k = moveInput.y;//如果在移动就更新用于判断动画状态的xy
@@ -68,6 +85,10 @@ public class GameInputManage_K : MonoBehaviour
         }
         else
         {
+            if (_audioSource.isActiveAndEnabled == true)
+            {
+                _audioSource.enabled = false;
+            }
             _animator.SetBool("isRuning", false);//不在移动就不更新用于动画判断的xy
         }
 
