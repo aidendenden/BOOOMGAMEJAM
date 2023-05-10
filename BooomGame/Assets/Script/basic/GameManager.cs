@@ -22,6 +22,9 @@ public sealed class GameManager : MonoBehaviour
     
 
     /// <summary>
+    /// 物品列表
+    /// </summary>
+    public static StuffList StuffList;
     /// 以下是监听交互的方法
     /// </summary>
     void OnEnable()

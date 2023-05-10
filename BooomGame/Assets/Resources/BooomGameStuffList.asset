@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124a1c813a940b8408704721e7a7b4c0, type: 3}
+  m_Name: BooomGameStuffList
+  m_EditorClassIdentifier: 
+  stuffList:
+  - stuffType: 0
+    stuffName: "\u72D7\u72D7\u9632\u75AB\u672C"
+    describe: "\u7EDD\u80B2\uFF1F\uFF1F\uFF1F"
+    stuffIcon: {fileID: 0}
+    canCollectedInBackpack: 0
+  - stuffType: 1
+    stuffName: "\u76AE\u5E26\u72D7\u7EF3"
+    describe: 
+    stuffIcon: {fileID: 0}
+    canCollectedInBackpack: 0
+  - stuffType: 2
+    stuffName: "\u5EA7\u673A"
+    describe: 
+    stuffIcon: {fileID: 0}
+    canCollectedInBackpack: 0
+  - stuffType: 3
+    stuffName: 
+    describe: 
+    stuffIcon: {fileID: 0}
+    canCollectedInBackpack: 0
+  - stuffType: 4
+    stuffName: 
+    describe: 
+    stuffIcon: {fileID: 0}
+    canCollectedInBackpack: 0
