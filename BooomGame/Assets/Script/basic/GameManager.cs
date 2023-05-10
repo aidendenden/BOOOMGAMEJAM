@@ -24,4 +24,8 @@ public sealed class GameManager : MonoBehaviour
     /// </summary>
     public string test;
 
+    /// <summary>
+    /// 物品列表
+    /// </summary>
+    public static StuffList StuffList;
 }
