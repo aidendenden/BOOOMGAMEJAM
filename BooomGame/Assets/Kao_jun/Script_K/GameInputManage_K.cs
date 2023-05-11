@@ -47,7 +47,7 @@ public class GameInputManage_K : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 position = transform.position;
         
