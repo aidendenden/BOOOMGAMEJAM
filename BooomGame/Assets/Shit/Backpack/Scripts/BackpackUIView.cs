@@ -10,45 +10,69 @@ using UnityEngine.UI;
 public class BackpackUIView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Button backpackListBtn;
+    public RectTransform backpackListContent;
+    public List<BackpackStuffItemView> backpackStuffItemViews;
 
-    public Func<List<string>> getItemIDList;
+    public Func<List<StuffEnum>> getItemIDList;
 
     RectTransform rectTransform;
     bool openBackPack = false;
     private void Awake()
     {
-        backpackListBtn?.onClick.AddListener(() => { OnBackpackBtnClick(getItemIDList?.Invoke()); });
+        backpackListBtn?.onClick.AddListener(() => { ShowOrHideBackpack(); });
         rectTransform = GetComponent<RectTransform>();
     }
 
-    public void OnBackpackBtnClick(List<string> itemIdList)
+    private void ShowOrHideBackpack()
     {
         if (openBackPack)
         {
-            //DOTweenModuleUI
-            rectTransform.DOAnchorPosX(-243.45f, 0.5f);
+            rectTransform.DOAnchorPosX(-backpackListContent.sizeDelta.x, 0.5f);
+            RefreshBackContent(getItemIDList?.Invoke());
         }
         else
         {
             rectTransform.DOAnchorPosX(-0f, 0.5f);
         }
-        
-
-        for (int i = 0; i < itemIdList?.Count; i++)
-        {
-
-        }
     }
 
+    private void RefreshBackContent(List<StuffEnum> itemIdList)
+    {
+        for (int i = 0; i < backpackStuffItemViews?.Count; i++)
+        {
+            
+            if (itemIdList.Count > 0 && itemIdList.Count -1 <= i)
+            {
+                StuffInfo stuffInfo = StuffInfo.GetStuffInfo(itemIdList[i]);
+                backpackStuffItemViews[i].SetStuffItemInfo(stuffInfo);
+            }
+            else
+            {
+                StuffInfo stuffInfo = StuffInfo.ReturnNullStuffInfo();
+                backpackStuffItemViews[i].SetStuffItemInfo(stuffInfo);
+            }
+        }
+        //for (int i = 0; i < itemIdList?.Count; i++)
+        //{
+            
+        //    if (backpackStuffItemViews.Count - 1 <)
+        //    {
+
+        //    }
+        //}
+    }
+
+    #region Êó±êÊÂ¼þ
     public void OnPointerExit(PointerEventData eventData)
     {
         openBackPack = false;
-        OnBackpackBtnClick(getItemIDList?.Invoke());
+        ShowOrHideBackpack();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         openBackPack = true;
-        OnBackpackBtnClick(getItemIDList?.Invoke());
+        ShowOrHideBackpack();
     }
+    #endregion
 }

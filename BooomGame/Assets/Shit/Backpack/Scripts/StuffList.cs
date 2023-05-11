@@ -25,10 +25,44 @@ public class StuffInfo
     public Texture2D stuffIcon;
     [Tooltip("能否收集进入背包")]
     public bool canCollectedInBackpack;
+
+    /// <summary>
+    /// 根据物品枚举查找物品信息
+    /// </summary>
+    /// <param name="stuffEnum"></param>
+    /// <returns></returns>
+    public static StuffInfo GetStuffInfo(StuffEnum stuffEnum)
+    {
+        StuffInfo stuffInfo = null;
+        GameManager.StuffList.stuffList.ForEach((item) =>
+        {
+            if (item.stuffType.Equals(stuffEnum))
+            {
+                stuffInfo = item;
+            }
+        });
+        return stuffInfo;
+    }
+    /// <summary>
+    /// 获取一个空物品信息
+    /// </summary>
+    /// <returns></returns>
+    public static StuffInfo ReturnNullStuffInfo()
+    {
+        return new StuffInfo()
+        {
+            stuffType = StuffEnum.Null,
+            stuffName = null,
+            describe = null,
+            stuffIcon = new Texture2D(1, 1),
+            canCollectedInBackpack = false,
+        };
+    }
 }
 
 public enum StuffEnum
 {
+    Null,
     狗狗防疫本,
     皮带狗绳,
     座机,

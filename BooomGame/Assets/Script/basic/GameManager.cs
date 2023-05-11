@@ -18,13 +18,25 @@ public sealed class GameManager : MonoBehaviour
     {
         get { return lazy.Value; }
     }
-    
-    
 
+    #region 物品列表
+    private static StuffList stuffList;
     /// <summary>
     /// 物品列表
     /// </summary>
-    public static StuffList StuffList;
+    public static StuffList StuffList 
+    {
+        get 
+        {
+            if (stuffList == null )
+            {
+                stuffList = Resources.Load<StuffList>("BooomGameStuffList");
+            }
+            return stuffList;
+        }
+    }
+    #endregion
+
     /// 以下是监听交互的方法
     /// </summary>
     void OnEnable()
