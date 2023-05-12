@@ -6,23 +6,15 @@ public class BackpackManager : MonoBehaviour
 {
     public static BackpackManager Instance { get; private set; }
 
+    public BackpackUIView backpackUIView;
+
     #region UIÄÚ²¿´úÂë
-    private BackpackUIView BackpackUIView { get; set; }
+    private List<StuffEnum> backpackItemsIDList = new List<StuffEnum>();
     private void Awake()
     {
         Instance = this;
-        DontDestroyOnLoad(Instance);
 
-        CreateBackpackUI();
-    }
-
-    private List<StuffEnum> backpackItemsIDList = new List<StuffEnum>();
-
-    private void CreateBackpackUI()
-    {
-        GameObject temp = Resources.Load<GameObject>("Backpack");
-        BackpackUIView = Instantiate(temp, transform).GetComponentInChildren<BackpackUIView>();
-        BackpackUIView.getItemIDList = () => { return backpackItemsIDList; };
+        backpackUIView.getItemIDList = () => { return backpackItemsIDList; };
     }
     #endregion
 

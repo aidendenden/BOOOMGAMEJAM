@@ -9,9 +9,7 @@ using UnityEngine.UI;
 
 public class BackpackUIView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Button backpackListBtn;
-    public RectTransform backpackListContent;
-    public List<BackpackStuffItemView> backpackStuffItemViews;
+    public List<BackpackStuffItemTrigger> backpackStuffItemViews;
 
     public Func<List<StuffEnum>> getItemIDList;
 
@@ -19,7 +17,6 @@ public class BackpackUIView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     bool openBackPack = false;
     private void Awake()
     {
-        backpackListBtn?.onClick.AddListener(() => { ShowOrHideBackpack(); });
         rectTransform = GetComponent<RectTransform>();
     }
 
@@ -27,12 +24,12 @@ public class BackpackUIView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         if (openBackPack)
         {
-            rectTransform.DOAnchorPosX(-backpackListContent.sizeDelta.x, 0.5f);
+            rectTransform.DOAnchorPosX(-rectTransform.sizeDelta.x, 0.5f);
             RefreshBackContent(getItemIDList?.Invoke());
         }
         else
         {
-            rectTransform.DOAnchorPosX(-0f, 0.5f);
+            rectTransform.DOAnchorPosX(0f, 0.5f);
         }
     }
 
