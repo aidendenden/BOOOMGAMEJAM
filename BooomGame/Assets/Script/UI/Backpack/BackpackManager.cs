@@ -19,6 +19,11 @@ public class BackpackManager : MonoBehaviour
     #endregion
 
     #region 外部调用
+
+    public List<StuffEnum> BackpackStuff
+    {
+        get => backpackItemsIDList;
+    }
     /// <summary>
     /// 将物品放进背包
     /// </summary>
