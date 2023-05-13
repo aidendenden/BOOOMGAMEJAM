@@ -37,30 +37,20 @@ public sealed class GameManager : MonoBehaviour
     }
     #endregion
 
-    /// 以下是监听交互的方法
-    /// </summary>
-    void OnEnable()
-    {
-        PlayerManager.OnTrigger += HandleTrigger;
-    }
-    
-    void OnDisable()
-    {
-        PlayerManager.OnTrigger -= HandleTrigger;
-    }
-    
-    void HandleTrigger(string message,EGameObj gameObj)
-    {
-        Debug.Log("Trigger event received:222222222222 " + message);
-    }
+    // 以下是监听交互的方法
+    // void OnEnable()
+    // {
+    //     PlayerManager.OnTrigger += HandleTrigger;
+    // }
+    //
+    // void OnDisable()
+    // {
+    //     PlayerManager.OnTrigger -= HandleTrigger;
+    // }
+    //
+    // void HandleTrigger(string message,EGameObj gameObj)
+    // {
+    //     Debug.Log("Trigger event received:222222222222 " + message,StuffEnum);
+    // }
 }
 
-
-/// <summary>
-/// 游戏道具类型
-/// </summary>
-public enum EGameObj
-{
-    door,
-    box,
-}

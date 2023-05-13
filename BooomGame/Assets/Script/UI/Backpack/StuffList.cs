@@ -15,19 +15,19 @@ public class StuffList : ScriptableObject
 [Serializable]
 public class StuffInfo
 {
-    [Tooltip("ÎïÆ·ÀàĞÍ")]
+    [Tooltip("ç‰©å“ç±»å‹")]
     public StuffEnum stuffType;
-    [Tooltip("ÎïÆ·Ãû³Æ")]
+    [Tooltip("ç‰©å“åç§°")]
     public string stuffName;
-    [Tooltip("ÎïÆ·ÃèÊö")]
+    [Tooltip("ç‰©å“æè¿°")]
     public string describe;
-    [Tooltip("ÎïÆ·Í¼±ê")]
+    [Tooltip("ç‰©å“å›¾æ ‡")]
     public Texture2D stuffIcon;
-    [Tooltip("ÄÜ·ñÊÕ¼¯½øÈë±³°ü")]
+    [Tooltip("èƒ½å¦æ”¶é›†è¿›å…¥èƒŒåŒ…")]
     public bool canCollectedInBackpack;
 
     /// <summary>
-    /// ¸ù¾İÎïÆ·Ã¶¾Ù²éÕÒÎïÆ·ĞÅÏ¢
+    /// æ ¹æ®ç‰©å“æšä¸¾æŸ¥æ‰¾ç‰©å“ä¿¡æ¯
     /// </summary>
     /// <param name="stuffEnum"></param>
     /// <returns></returns>
@@ -44,7 +44,7 @@ public class StuffInfo
         return stuffInfo;
     }
     /// <summary>
-    /// »ñÈ¡Ò»¸ö¿ÕÎïÆ·ĞÅÏ¢
+    /// è·å–ä¸€ä¸ªç©ºç‰©å“ä¿¡æ¯
     /// </summary>
     /// <returns></returns>
     public static StuffInfo ReturnNullStuffInfo()
@@ -63,28 +63,28 @@ public class StuffInfo
 public enum StuffEnum
 {
     Null,
-    ¹·¹··ÀÒß±¾,
-    Æ¤´ø¹·Éş,
-    ×ù»ú,
-    ÁÁ¹âµÄµçÄÔ,
-    Íë,
-    Å¯ºø,
-    ÆÆÆÆÀÃÀÃµÄµÄÍæ¾ß,
-    Ì¨µÆ,
-    ÃÅËø,
-    ikunº£±¨,
-    ³éÌëÀïµÄ¹·ÁãÊ³,
-    ÃÅºóµÄÊØÔò,
-    ¹«¸æÀ¸,
-    ¹·¹ÇÍ·,
+    ç‹—ç‹—é˜²ç–«æœ¬,
+    çš®å¸¦ç‹—ç»³,
+    åº§æœº,
+    äº®å…‰çš„ç”µè„‘,
+    ç¢—,
+    æš–å£¶,
+    ç ´ç ´çƒ‚çƒ‚çš„çš„ç©å…·,
+    å°ç¯,
+    é—¨é”,
+    ikunæµ·æŠ¥,
+    æŠ½å±‰é‡Œçš„ç‹—é›¶é£Ÿ,
+    é—¨åçš„å®ˆåˆ™,
+    å…¬å‘Šæ ,
+    ç‹—éª¨å¤´,
     Exit,
-    ËŞÉáÃÅ,
-    ËÀÂ·ÃÅ,
-    ËŞÉá×Ô¶¯¿ªË®»ú,
-    À¬»ø,
-    Å¯ÆøÆ¬ºÍÍà×Ó,
-    ÁÀÒÂ²æ×Ó,
-    ÃÜÂëËø,
-    ÅèÔÔ
+    å®¿èˆé—¨,
+    æ­»è·¯é—¨,
+    å®¿èˆè‡ªåŠ¨å¼€æ°´æœº,
+    åƒåœ¾,
+    æš–æ°”ç‰‡å’Œè¢œå­,
+    æ™¾è¡£å‰å­,
+    å¯†ç é”,
+    ç›†æ ½
 }
 

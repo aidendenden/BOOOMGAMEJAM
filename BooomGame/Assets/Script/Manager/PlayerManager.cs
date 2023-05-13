@@ -7,10 +7,10 @@ using UnityEngine;
 /// </summary>
 public class PlayerManager : MonoBehaviour
 {
-    public delegate void TriggerEventHandler(string message,EGameObj gameItem);
+    public delegate void TriggerEventHandler(string message,StuffEnum gameItem);
     public static event TriggerEventHandler OnTrigger;
     
-    public void Triggered(string message,EGameObj gameItem) {
+    public void Triggered(string message,StuffEnum gameItem) {
         Debug.Log("Triggered: " + message);
         if (OnTrigger != null)
             OnTrigger(message,gameItem);

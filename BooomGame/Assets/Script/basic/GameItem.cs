@@ -9,7 +9,7 @@ using UnityEngine;
 public class GameItem : MonoBehaviour
 {
     [SerializeField]
-    public EGameObj gameItem;
+    public StuffEnum gameItem;
     
     void OnTriggerEnter(Collider other) {
         PlayerManager triggerEvent = other.GetComponent<PlayerManager>();
