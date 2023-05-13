@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,14 @@ using UnityEngine;
 /// </summary>
 public class PlayerManager : MonoBehaviour
 {
+    private static readonly Lazy<PlayerManager> Lazy = new Lazy<PlayerManager>(() => new PlayerManager());
+
+    private PlayerManager()
+    {
+    }
+
+    public static PlayerManager Instance => Lazy.Value;
+
     public delegate void TriggerEventHandler(string message,StuffEnum gameItem);
     public static event TriggerEventHandler OnTrigger;
     

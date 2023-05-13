@@ -4,20 +4,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[AddComponentMenu("PlayerManager")]
 public class GameInputManage : MonoBehaviour
 {
+    private static readonly Lazy<GameInputManage> Lazy = new Lazy<GameInputManage>(() => new GameInputManage());
+
+    private GameInputManage()
+    {
+    }
+
+    public static GameInputManage Instance => Lazy.Value;
+
+    [HideInInspector] public Vector3 playerLocation;
     public float speed = 5f;
-    private Vector3 moveInput;
-    private Rigidbody playerRig;
+
+    private Vector3 _moveInput;
+    private Rigidbody _playerRig;
     private Animator _animator;
     private AudioSource _audioSource;
-    private float StopX_k, StopY_k; //用于储存输入的方向传给animator中判断方向
+    private float _stopXk, _stopYk; //用于储存输入的方向传给animator中判断方向
+    private static readonly int IsRunning = Animator.StringToHash("isRunning");
+    private static readonly int InputX = Animator.StringToHash("inputX");
+    private static readonly int InputY = Animator.StringToHash("inputY");
 
     private void Start()
     {
-        if (transform.TryGetComponent<Rigidbody>(out playerRig))
+        if (transform.TryGetComponent<Rigidbody>(out _playerRig))
         {
-            Debug.Log("Found Rigidbody component: " + playerRig.name);
+            Debug.Log("Found Rigidbody component: " + _playerRig.name);
         }
         else
         {
@@ -46,19 +60,20 @@ public class GameInputManage : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 position = transform.position;
+        var position = transform.position;
 
-        position.x += moveInput.x * speed * Time.deltaTime;
-        position.z += moveInput.y * speed * Time.deltaTime; //暂时是在zx平面上移动
+        position.x += _moveInput.x * speed * Time.deltaTime;
+        position.z += _moveInput.y * speed * Time.deltaTime; //暂时是在zx平面上移动
 
         WalkAnimationController_K(); //判断player动画
 
-        playerRig.MovePosition(position);
+        _playerRig.MovePosition(position);
+        playerLocation = position;
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
+        _moveInput = context.ReadValue<Vector2>();
     }
 
 
@@ -69,16 +84,16 @@ public class GameInputManage : MonoBehaviour
             return;
         }
 
-        if (moveInput != Vector3.zero)
+        if (_moveInput != Vector3.zero)
         {
             if (_audioSource.isActiveAndEnabled == false)
             {
                 _audioSource.enabled = true;
             }
 
-            _animator.SetBool("isRuning", true);
-            StopX_k = moveInput.x;
-            StopY_k = moveInput.y; //如果在移动就更新用于判断动画状态的xy
+            _animator.SetBool(IsRunning, true);
+            _stopXk = _moveInput.x;
+            _stopYk = _moveInput.y; //如果在移动就更新用于判断动画状态的xy
         }
         else
         {
@@ -87,10 +102,10 @@ public class GameInputManage : MonoBehaviour
                 _audioSource.enabled = false;
             }
 
-            _animator.SetBool("isRuning", false); //不在移动就不更新用于动画判断的xy
+            _animator.SetBool(IsRunning, false); //不在移动就不更新用于动画判断的xy
         }
 
-        _animator.SetFloat("inputX", StopX_k);
-        _animator.SetFloat("inputY", StopY_k);
+        _animator.SetFloat(InputX, _stopXk);
+        _animator.SetFloat(InputY, _stopYk);
     }
 }
