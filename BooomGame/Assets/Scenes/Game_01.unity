@@ -9082,8 +9082,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameInputManage_K, Assembly-CSharp
+      - m_Target: {fileID: 7225269971117038253}
+        m_TargetAssemblyTypeName: GameInputManage, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
