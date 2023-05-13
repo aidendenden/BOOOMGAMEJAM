@@ -24,7 +24,7 @@ public class SaveAndLoadManager : MonoBehaviour
     public struct SaveData
     {
         public string playerName;
-        public StuffList playerBackpack;
+        public List<StuffEnum> playerBackpack;
         public Vector3 playerPosition;
     }
 
@@ -50,7 +50,7 @@ public class SaveAndLoadManager : MonoBehaviour
         SaveData saveData = new SaveData
         {
             playerName = SystemInfo.deviceName,//设备名字
-            playerBackpack = GameManager.StuffList,
+            playerBackpack = BackpackManager.Instance.BackpackStuff,
             playerPosition = GameInputManage.Instance.playerLocation
         };
 
