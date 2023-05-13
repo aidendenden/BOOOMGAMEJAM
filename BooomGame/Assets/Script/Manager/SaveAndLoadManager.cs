@@ -24,25 +24,19 @@ public class SaveAndLoadManager : MonoBehaviour
     public struct SaveData
     {
         public string playerName;
-        public StuffList playerBackpack;
+        public List<StuffEnum> playerBackpack;
         public Vector3 playerPosition;
     }
 
     // 存档文件夹路径
-    private string _dataPath;
+    private static string DataPath => Application.persistentDataPath;
 
     // 存档列表，key为编号，value为地址
-    private Dictionary<uint, string> _saveList = new Dictionary<uint, string>();
+    private Dictionary<uint, string> _saveList =>LoadSaveList();
 
-    private void Awake()
-    {
-        // 获取存档文件夹路径
-        _dataPath = Application.persistentDataPath;
-
-        // 加载存档列表
-        _saveList = LoadSaveList();
-    }
-
+    //外部获取存档字典
+    public Dictionary<uint, string> SaveList => _saveList;
+    
     // 保存存档
     public void SaveGame(uint saveID)
     {
@@ -50,13 +44,13 @@ public class SaveAndLoadManager : MonoBehaviour
         SaveData saveData = new SaveData
         {
             playerName = SystemInfo.deviceName,//设备名字
-            playerBackpack = GameManager.StuffList,
+            playerBackpack = BackpackManager.Instance.BackpackStuff,
             playerPosition = GameInputManage.Instance.playerLocation
         };
 
         // 生成存档文件名和路径
         string fileName = "Save_" + saveID + ".dat";
-        string filePath = Path.Combine(_dataPath, fileName);
+        string filePath = Path.Combine(DataPath, fileName);
 
         // 序列化存档数据为二进制格式
         using (FileStream fileStream = File.Create(filePath))
@@ -123,7 +117,7 @@ public class SaveAndLoadManager : MonoBehaviour
         Dictionary<uint, string> saveList = new Dictionary<uint, string>();
 
         // 获取存档文件夹下所有文件的完整路径
-        string[] fileNames = Directory.GetFiles(_dataPath);
+        string[] fileNames = Directory.GetFiles(DataPath);
 
         // 遍历文件列表，筛选存档文件并添加到存档列表中
         foreach (string fileName in fileNames)
