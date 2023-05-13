@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,16 @@ using Vector3 = UnityEngine.Vector3;
 
 public class SaveAndLoadManager : MonoBehaviour
 {
+    private static readonly Lazy<SaveAndLoadManager>
+        Lazy = new Lazy<SaveAndLoadManager>(() => new SaveAndLoadManager());
+
+    private SaveAndLoadManager()
+    {
+    }
+
+    public static SaveAndLoadManager Instance => Lazy.Value;
+
+
     // 存档数据结构
     [System.Serializable]
     public struct SaveData
@@ -16,44 +27,65 @@ public class SaveAndLoadManager : MonoBehaviour
         public StuffList playerBackpack;
         public Vector3 playerPosition;
     }
-    
-    // 存档文件路径
-    private string _saveFilePath;
 
-    private void Start()
+    // 存档文件夹路径
+    private string _dataPath;
+
+    // 存档列表，key为编号，value为地址
+    private Dictionary<uint, string> _saveList = new Dictionary<uint, string>();
+
+    private void Awake()
     {
-        // 初始化存档文件路径
-        _saveFilePath = Path.Combine(Application.persistentDataPath, "save_data.dat");
+        // 获取存档文件夹路径
+        _dataPath = Application.persistentDataPath;
+
+        // 加载存档列表
+        _saveList = LoadSaveList();
     }
 
-    // 存档
-    public void SaveGame()
+    // 保存存档
+    public void SaveGame(uint saveID)
     {
         // 创建存档数据对象
-        var saveData = new SaveData
+        SaveData saveData = new SaveData
         {
-            playerName = "Player1",
+            playerName = SystemInfo.deviceName,//设备名字
             playerBackpack = GameManager.StuffList,
             playerPosition = GameInputManage.Instance.playerLocation
         };
 
+        // 生成存档文件名和路径
+        string fileName = "Save_" + saveID + ".dat";
+        string filePath = Path.Combine(_dataPath, fileName);
+
         // 序列化存档数据为二进制格式
-        var formatter = new BinaryFormatter();
-        using (FileStream fileStream = File.Create(_saveFilePath))
+        using (FileStream fileStream = File.Create(filePath))
         {
+            BinaryFormatter formatter = new BinaryFormatter();
             formatter.Serialize(fileStream, saveData);
+        }
+
+        // 更新存档列表
+        if (_saveList.ContainsKey(saveID))
+        {
+            _saveList[saveID] = filePath;
+        }
+        else
+        {
+            _saveList.Add(saveID, filePath);
         }
     }
 
     // 加载存档
-    public void LoadGame()
+    public void LoadGame(uint saveID)
     {
-        if (File.Exists(_saveFilePath))
+        // 获取存档文件路径
+        if (_saveList.TryGetValue(saveID, out string filePath))
         {
             // 反序列化二进制数据为存档数据对象
-            var formatter = new BinaryFormatter();
-            using (FileStream fileStream = File.Open(_saveFilePath, FileMode.Open))
+            using (FileStream fileStream = File.Open(filePath, FileMode.Open))
             {
+                BinaryFormatter formatter = new BinaryFormatter();
                 SaveData saveData = (SaveData)formatter.Deserialize(fileStream);
 
                 // 加载存档数据
@@ -67,5 +99,42 @@ public class SaveAndLoadManager : MonoBehaviour
             Debug.Log("Save file does not exist!");
         }
     }
-}
 
+    // 删除存档
+    public void DeleteSave(uint saveID)
+    {
+        if (_saveList.TryGetValue(saveID, out string filePath))
+        {
+            // 删除存档文件
+            File.Delete(filePath);
+
+            // 更新存档列表
+            _saveList.Remove(saveID);
+        }
+        else
+        {
+            Debug.Log("Save file does not exist!");
+        }
+    }
+
+    // 加载存档列表
+    private Dictionary<uint, string> LoadSaveList()
+    {
+        Dictionary<uint, string> saveList = new Dictionary<uint, string>();
+
+        // 获取存档文件夹下所有文件的完整路径
+        string[] fileNames = Directory.GetFiles(_dataPath);
+
+        // 遍历文件列表，筛选存档文件并添加到存档列表中
+        foreach (string fileName in fileNames)
+        {
+            if (Path.GetExtension(fileName) == ".dat" && fileName.StartsWith("Save_"))
+            {
+                uint saveID = uint.Parse(Path.GetFileNameWithoutExtension(fileName).Substring(5));
+                saveList.Add(saveID, fileName);
+            }
+        }
+
+        return saveList;
+    }
+}

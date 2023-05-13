@@ -17,7 +17,7 @@ public class GameInputManage : MonoBehaviour
 
     [HideInInspector] public Vector3 playerLocation;
     public float speed = 5f;
-    
+
     private Vector3 _moveInput;
     private Rigidbody _playerRig;
     private Animator _animator;
