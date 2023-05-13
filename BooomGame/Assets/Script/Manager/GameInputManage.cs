@@ -82,6 +82,7 @@ public class GameInputManage : MonoBehaviour
         if (!_animator)
         {
             return;
+            
         }
 
         if (_moveInput != Vector3.zero)
@@ -107,5 +108,8 @@ public class GameInputManage : MonoBehaviour
 
         _animator.SetFloat(InputX, _stopXk);
         _animator.SetFloat(InputY, _stopYk);
+
+       
+
     }
 }

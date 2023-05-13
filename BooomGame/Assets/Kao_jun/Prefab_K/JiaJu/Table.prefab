@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1415139498378699400}
   - component: {fileID: 1415139498378699402}
   - component: {fileID: 1415139498378699404}
-  - component: {fileID: 1415139498378699403}
   m_Layer: 0
   m_Name: WhiteBlock
   m_TagString: Untagged
@@ -113,22 +112,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1415139498378699403
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415139498378699447}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1415139499361443422
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +221,6 @@ GameObject:
   - component: {fileID: 2029428517675257103}
   - component: {fileID: 2029428517675257102}
   - component: {fileID: 2029428517675257101}
-  - component: {fileID: 2029428517675257100}
   m_Layer: 0
   m_Name: BlackZhuZi (1)
   m_TagString: Untagged
@@ -324,22 +306,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &2029428517675257100
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029428517675257098}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &2029428517772136182
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +360,6 @@ GameObject:
   - component: {fileID: 3303225259647138649}
   - component: {fileID: 3303225259647138651}
   - component: {fileID: 3303225259647138653}
-  - component: {fileID: 3303225259647138650}
   m_Layer: 0
   m_Name: PrueWhite
   m_TagString: Untagged
@@ -495,22 +460,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &3303225259647138650
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3303225259647138662}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &3303225260030150543
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +666,6 @@ GameObject:
   - component: {fileID: 4588628429275282451}
   - component: {fileID: 4588628429275282449}
   - component: {fileID: 4588628429275282455}
-  - component: {fileID: 4588628429275282448}
   m_Layer: 0
   m_Name: WhiteBlock
   m_TagString: Untagged
@@ -819,22 +767,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4588628429275282448
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4588628429275282476}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &4598257587831728485
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,7 +876,6 @@ GameObject:
   - component: {fileID: 4598257588010276275}
   - component: {fileID: 4598257588010276273}
   - component: {fileID: 4598257588010276279}
-  - component: {fileID: 4598257588010276272}
   m_Layer: 0
   m_Name: PrueWhite (1)
   m_TagString: Untagged
@@ -1047,22 +978,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4598257588010276272
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4598257588010276236}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &4745878532521910143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +990,6 @@ GameObject:
   - component: {fileID: 4745878532521910131}
   - component: {fileID: 4745878532521910140}
   - component: {fileID: 4745878532521910141}
-  - component: {fileID: 4745878532521910142}
   m_Layer: 0
   m_Name: BlackZhuZi
   m_TagString: Untagged
@@ -1161,22 +1075,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4745878532521910142
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4745878532521910143}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &4750855261832867363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1087,6 @@ GameObject:
   - component: {fileID: 4750855261832867356}
   - component: {fileID: 4750855261832867358}
   - component: {fileID: 4750855261832867352}
-  - component: {fileID: 4750855261832867359}
   m_Layer: 0
   m_Name: PrueWhite (2)
   m_TagString: Untagged
@@ -1291,22 +1188,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4750855261832867359
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4750855261832867363}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &4750855262820848330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,7 +1394,6 @@ GameObject:
   - component: {fileID: 5310653579469392159}
   - component: {fileID: 5310653579469392157}
   - component: {fileID: 5310653579469392155}
-  - component: {fileID: 5310653579469392156}
   m_Layer: 0
   m_Name: PrueWhite (3)
   m_TagString: Untagged
@@ -1614,22 +1494,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5310653579469392156
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5310653579469392160}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5310653580177980225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,7 +1506,6 @@ GameObject:
   - component: {fileID: 5310653580177980286}
   - component: {fileID: 5310653580177980284}
   - component: {fileID: 5310653580177980282}
-  - component: {fileID: 5310653580177980285}
   m_Layer: 0
   m_Name: PrueWhite (4)
   m_TagString: Untagged
@@ -1743,22 +1606,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5310653580177980285
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5310653580177980225}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5310653580324833345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +1715,6 @@ GameObject:
   - component: {fileID: 5310653580771308695}
   - component: {fileID: 5310653580771308693}
   - component: {fileID: 5310653580771308691}
-  - component: {fileID: 5310653580771308692}
   m_Layer: 0
   m_Name: PrueWhite
   m_TagString: Untagged
@@ -1969,22 +1815,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5310653580771308692
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5310653580771308712}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5310653580800591784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,7 +2021,6 @@ GameObject:
   - component: {fileID: 6068536084869997088}
   - component: {fileID: 6068536084869997090}
   - component: {fileID: 6068536084869997092}
-  - component: {fileID: 6068536084869997091}
   m_Layer: 0
   m_Name: PrueWhite (5)
   m_TagString: Untagged
@@ -2292,22 +2121,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &6068536084869997091
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6068536084869997087}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &6447416902491919814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,7 +2133,6 @@ GameObject:
   - component: {fileID: 6447416902491919865}
   - component: {fileID: 6447416902491919867}
   - component: {fileID: 6447416902491919869}
-  - component: {fileID: 6447416902491919866}
   m_Layer: 0
   m_Name: WhiteBlock (1)
   m_TagString: Untagged
@@ -2421,22 +2233,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &6447416902491919866
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6447416902491919814}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &6447416903107209519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,7 +2439,6 @@ GameObject:
   - component: {fileID: 7052958097473930147}
   - component: {fileID: 7052958097473930145}
   - component: {fileID: 7052958097473930151}
-  - component: {fileID: 7052958097473930144}
   m_Layer: 0
   m_Name: WhiteBlock
   m_TagString: Untagged
@@ -2744,22 +2539,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7052958097473930144
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7052958097473930140}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &7075858271485307485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,7 +2551,6 @@ GameObject:
   - component: {fileID: 7075858271485307490}
   - component: {fileID: 7075858271485307488}
   - component: {fileID: 7075858271485307494}
-  - component: {fileID: 7075858271485307489}
   m_Layer: 0
   m_Name: PrueWhite
   m_TagString: Untagged
@@ -2873,22 +2651,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7075858271485307489
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7075858271485307485}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &7075858272469161652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,7 +2815,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2847706855860476532, guid: eb9b5275d1b563045bd24d6a61c5e0ae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eb9b5275d1b563045bd24d6a61c5e0ae, type: 3}
 --- !u!4 &4300071435587097529 stripped
 Transform:
