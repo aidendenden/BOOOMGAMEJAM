@@ -17,6 +17,7 @@ public class GameInputManage : MonoBehaviour
 
     [HideInInspector] public Vector3 playerLocation;
     public float speed = 5f;
+    public float stopDrag = 50f;//用于在物理运动中实现缓停
 
     private Vector3 _moveInput;
     private Rigidbody _playerRig;
@@ -60,21 +61,17 @@ public class GameInputManage : MonoBehaviour
 
     void FixedUpdate()
     {
-        var position = transform.position;
-
-        position.x += _moveInput.x * speed * Time.deltaTime;
-        position.z += _moveInput.y * speed * Time.deltaTime; //暂时是在zx平面上移动
-
+        
+        PositionMove();//player移动
         WalkAnimationController_K(); //判断player动画
-
-        _playerRig.MovePosition(position);
-        playerLocation = position;
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         _moveInput = context.ReadValue<Vector2>();
     }
+
+
 
 
     private void WalkAnimationController_K() //这个是给主角判断动画的
@@ -112,4 +109,18 @@ public class GameInputManage : MonoBehaviour
        
 
     }
+
+    void PositionMove()
+    {
+        var position = transform.position;
+
+        position.x += _moveInput.x * speed * Time.deltaTime;
+        position.z += _moveInput.y * speed * Time.deltaTime; //暂时是在zx平面上移动
+
+
+
+        _playerRig.MovePosition(position);
+        playerLocation = position;
+    }
+
 }
