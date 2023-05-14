@@ -5,10 +5,18 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class BackpackStuffItemTrigger : MonoBehaviour, IPointerClickHandler
+public class BackpackStuffItemTrigger : MonoBehaviour, /*IPointerClickHandler, */IPointerEnterHandler, IPointerExitHandler
 {
     public StuffEnum stuffEnum;
     public Image icon;
+
+    public Button check;
+
+    private void Awake()
+    {
+        check?.onClick.AddListener(OnBackpackStuffClick);
+        check.gameObject.SetActive(false);
+    }
 
     public void SetStuffItemInfo(StuffInfo stuffInfo)
     {
@@ -16,10 +24,26 @@ public class BackpackStuffItemTrigger : MonoBehaviour, IPointerClickHandler
         icon.sprite = Sprite.Create(stuffInfo.stuffIcon, new Rect(0, 0, stuffInfo.stuffIcon.width, stuffInfo.stuffIcon.height), Vector2.zero);
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    private void OnBackpackStuffClick()
     {
+        Debug.Log("Backpack:\"" + stuffEnum + "\"--OnClick!");
         BackpackManager.Instance.OnBackpackItemViewClick(stuffEnum);
     }
 
 
+    //public void OnPointerClick(PointerEventData eventData)
+    //{
+    //    BackpackManager.Instance.OnBackpackItemViewClick(stuffEnum);
+    //}
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        check.gameObject.SetActive(false);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (stuffEnum == StuffEnum.Null) return;
+        check.gameObject.SetActive(true);
+    }
 }
