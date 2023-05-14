@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[AddComponentMenu("PlayerManager")]
 public class GameInputManage : MonoBehaviour
 {
     private static readonly Lazy<GameInputManage> Lazy = new Lazy<GameInputManage>(() => new GameInputManage());
