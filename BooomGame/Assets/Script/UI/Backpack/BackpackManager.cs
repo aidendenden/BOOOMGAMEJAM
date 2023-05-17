@@ -15,6 +15,8 @@ public class BackpackManager : MonoBehaviour
         Instance = this;
 
         backpackUIView.getItemIDList = () => { return backpackItemsIDList; };
+
+        InteractionLogic.Instance.CollectedInBackpack += PushStuffInBackPack;
     }
     #endregion
 

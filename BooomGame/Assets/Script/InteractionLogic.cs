@@ -23,20 +23,24 @@ public class InteractionLogic
         PlayerManager.Instance.AddListener(Interaction);
     }
 
+
+    #region 触发物品事件
+    private Action<StuffEnum> collectedInBackpack;
     /// <summary>
-    /// 触发交互狗狗防疫本的事件
+    /// 收集进背包的事件
     /// </summary>
-    private Action dogBook;
-    /// <summary>
-    /// 外部注册事件
-    /// </summary>
-    public event Action DogBook
+    public event Action<StuffEnum> CollectedInBackpack
     {
-        add => dogBook += value;
-        remove => dogBook -= value;
+        add => collectedInBackpack += value;
+        remove => collectedInBackpack -= value;
     }
+    #endregion
 
-
+    /// <summary>
+    /// 交互物品
+    /// </summary>
+    /// <param name="msg"></param>
+    /// <param name="stuffEnum"></param>
     public void Interaction(string msg, StuffEnum stuffEnum)
     {
         switch (stuffEnum)
@@ -44,7 +48,6 @@ public class InteractionLogic
             case StuffEnum.Null:
                 break;
             case StuffEnum.狗狗防疫本:
-                dogBook?.Invoke();
                 break;
             case StuffEnum.皮带狗绳:
                 break;
@@ -57,6 +60,10 @@ public class InteractionLogic
             case StuffEnum.暖壶:
                 break;
             case StuffEnum.破破烂烂的的玩具:
+            case StuffEnum.抽屉里的狗零食:
+            case StuffEnum.狗骨头:
+                //收集进背包
+                collectedInBackpack?.Invoke(stuffEnum);
                 break;
             case StuffEnum.台灯:
                 break;
@@ -64,13 +71,9 @@ public class InteractionLogic
                 break;
             case StuffEnum.ikun海报:
                 break;
-            case StuffEnum.抽屉里的狗零食:
-                break;
             case StuffEnum.门后的守则:
                 break;
             case StuffEnum.公告栏:
-                break;
-            case StuffEnum.狗骨头:
                 break;
             case StuffEnum.Exit:
                 break;
@@ -94,4 +97,6 @@ public class InteractionLogic
                 break;
         }
     }
+
+
 }
