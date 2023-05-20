@@ -22,12 +22,16 @@ public class BackpackStuffItemTrigger : MonoBehaviour, /*IPointerClickHandler, *
     {
         stuffEnum = stuffInfo.stuffType;
         icon.sprite = Sprite.Create(stuffInfo.stuffIcon, new Rect(0, 0, stuffInfo.stuffIcon.width, stuffInfo.stuffIcon.height), Vector2.zero);
+        if (stuffInfo.stuffType == StuffEnum.Null)
+        {
+            icon.color = new Color(1, 1, 1, 0);
+        }
     }
 
     private void OnBackpackStuffClick()
     {
         Debug.Log("Backpack:\"" + stuffEnum + "\"--OnClick!");
-        BackpackManager.Instance.OnBackpackItemViewClick(stuffEnum);
+        BackpackManager.Instance.OnBackpackStuffCheckClick?.Invoke(stuffEnum);
     }
 
 

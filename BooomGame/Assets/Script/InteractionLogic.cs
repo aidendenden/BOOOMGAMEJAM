@@ -49,8 +49,6 @@ public class InteractionLogic
                 break;
             case StuffEnum.狗狗防疫本:
                 break;
-            case StuffEnum.皮带狗绳:
-                break;
             case StuffEnum.座机:
                 break;
             case StuffEnum.亮光的电脑:
@@ -59,6 +57,7 @@ public class InteractionLogic
                 break;
             case StuffEnum.暖壶:
                 break;
+            case StuffEnum.皮带狗绳:
             case StuffEnum.破破烂烂的的玩具:
             case StuffEnum.抽屉里的狗零食:
             case StuffEnum.狗骨头:
