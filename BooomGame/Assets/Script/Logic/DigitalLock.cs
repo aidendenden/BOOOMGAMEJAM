@@ -4,13 +4,13 @@ using UnityEngine.UI;
 
 public class DigitalLock : MonoBehaviour
 {
-    private string input = "";
-    public const string password = "1234";
+    private string _input = "";
+    private const string Password = "1234";
 
     public void EnterDigit(string digit)
     {
-        input += digit;
-        if (input.Length > 4)
+        _input += digit;
+        if (_input.Length > 4)
         {
             Debug.Log("密码超出大小");
             return;
@@ -22,29 +22,29 @@ public class DigitalLock : MonoBehaviour
     public void DeleteDigit()
     {
         // 从输入中删除最后位数字
-        if (input.Length > 0)
+        if (_input.Length > 0)
         {
-            input = input.Substring(0, input.Length - 1);
+            _input = _input.Substring(0, _input.Length - 1);
         }
     }
 
     private void CheckPassword()
     {
-        if (input.Length<4)
+        if (_input.Length<4)
         {
             Debug.Log("密码错误");
             return;
         }
         
-        if (input == password)
+        if (_input == Password)
         {
             Debug.Log("成功");
-            input = "";
+            _input = "";
         }
-        else if (input.Length == 4)
+        else if (_input.Length == 4)
         {
             Debug.Log("密码错误");
-            input = "";
+            _input = "";
         }
     }
 }

@@ -14,15 +14,11 @@ public class GameItem : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("HIHIHIHI");
         PlayerManager.Instance.Triggered("to touch",gameItem);
     }
 
     void OnTriggerEnter(Collider other) {
-        PlayerManager triggerEvent = other.GetComponent<PlayerManager>();
-        if (triggerEvent != null) {
-            triggerEvent.Triggered("Hello, World!",gameItem);
-        }
+        PlayerManager.Instance.Triggered("to TriggerEnter",gameItem);
     }
     
 }
