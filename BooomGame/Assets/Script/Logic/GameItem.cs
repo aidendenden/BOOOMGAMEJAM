@@ -14,7 +14,7 @@ public class GameItem : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        PlayerManager.Instance.Triggered("to touch",gameItem);
     }
 
     void OnTriggerEnter(Collider other) {

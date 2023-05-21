@@ -24,10 +24,10 @@ public class InteractionLogic
     }
 
 
-    #region ´¥·¢ÎïÆ·ÊÂ¼ş
+    #region è§¦å‘ç‰©å“äº‹ä»¶
     private Action<StuffEnum> collectedInBackpack;
     /// <summary>
-    /// ÊÕ¼¯½ø±³°üµÄÊÂ¼ş
+    /// æ”¶é›†è¿›èƒŒåŒ…çš„äº‹ä»¶
     /// </summary>
     public event Action<StuffEnum> CollectedInBackpack
     {
@@ -37,7 +37,7 @@ public class InteractionLogic
     #endregion
 
     /// <summary>
-    /// ½»»¥ÎïÆ·
+    /// äº¤äº’ç‰©å“
     /// </summary>
     /// <param name="msg"></param>
     /// <param name="stuffEnum"></param>
@@ -47,50 +47,50 @@ public class InteractionLogic
         {
             case StuffEnum.Null:
                 break;
-            case StuffEnum.¹·¹··ÀÒß±¾:
+            case StuffEnum.ç‹—ç‹—é˜²ç–«æœ¬:
                 break;
-            case StuffEnum.×ù»ú:
+            case StuffEnum.åº§æœº:
                 break;
-            case StuffEnum.ÁÁ¹âµÄµçÄÔ:
+            case StuffEnum.äº®å…‰çš„ç”µè„‘:
                 break;
-            case StuffEnum.Íë:
+            case StuffEnum.ç¢—:
                 break;
-            case StuffEnum.Å¯ºø:
+            case StuffEnum.æš–å£¶:
                 break;
-            case StuffEnum.Æ¤´ø¹·Éş:
-            case StuffEnum.ÆÆÆÆÀÃÀÃµÄµÄÍæ¾ß:
-            case StuffEnum.³éÌëÀïµÄ¹·ÁãÊ³:
-            case StuffEnum.¹·¹ÇÍ·:
-                //ÊÕ¼¯½ø±³°ü
+            case StuffEnum.çš®å¸¦ç‹—ç»³:
+            case StuffEnum.ç ´ç ´çƒ‚çƒ‚çš„çš„ç©å…·:
+            case StuffEnum.æŠ½å±‰é‡Œçš„ç‹—é›¶é£Ÿ:
+            case StuffEnum.ç‹—éª¨å¤´:
+                //æ”¶é›†è¿›èƒŒåŒ…
                 collectedInBackpack?.Invoke(stuffEnum);
                 break;
-            case StuffEnum.Ì¨µÆ:
+            case StuffEnum.å°ç¯:
                 break;
-            case StuffEnum.ÃÅËø:
+            case StuffEnum.é—¨é”:
                 break;
-            case StuffEnum.ikunº£±¨:
+            case StuffEnum.ikunæµ·æŠ¥:
                 break;
-            case StuffEnum.ÃÅºóµÄÊØÔò:
+            case StuffEnum.é—¨åçš„å®ˆåˆ™:
                 break;
-            case StuffEnum.¹«¸æÀ¸:
+            case StuffEnum.å…¬å‘Šæ :
                 break;
             case StuffEnum.Exit:
                 break;
-            case StuffEnum.ËŞÉáÃÅ:
+            case StuffEnum.å®¿èˆé—¨:
                 break;
-            case StuffEnum.ËÀÂ·ÃÅ:
+            case StuffEnum.æ­»è·¯é—¨:
                 break;
-            case StuffEnum.ËŞÉá×Ô¶¯¿ªË®»ú:
+            case StuffEnum.å®¿èˆè‡ªåŠ¨å¼€æ°´æœº:
                 break;
-            case StuffEnum.À¬»ø:
+            case StuffEnum.åƒåœ¾:
                 break;
-            case StuffEnum.Å¯ÆøÆ¬ºÍÍà×Ó:
+            case StuffEnum.æš–æ°”ç‰‡å’Œè¢œå­:
                 break;
-            case StuffEnum.ÁÀÒÂ²æ×Ó:
+            case StuffEnum.æ™¾è¡£å‰å­:
                 break;
-            case StuffEnum.ÃÜÂëËø:
+            case StuffEnum.å¯†ç é”:
                 break;
-            case StuffEnum.ÅèÔÔ:
+            case StuffEnum.ç›†æ ½:
                 break;
             default:
                 break;
