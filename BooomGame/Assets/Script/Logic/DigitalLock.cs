@@ -30,12 +30,6 @@ public class DigitalLock : MonoBehaviour
 
     private void CheckPassword()
     {
-        if (_input.Length<4)
-        {
-            Debug.Log("密码错误");
-            return;
-        }
-        
         if (_input == Password)
         {
             Debug.Log("成功");
