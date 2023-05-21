@@ -84,13 +84,13 @@ MonoBehaviour:
     describe: "\u4F3C\u4E4E\u5177\u6709\u6781\u5F3A\u7684\u7EA6\u675F\u529B\r\n\u6709\u5FC5\u8981\u6309Alt
       + F4\u622A\u56FE\r\n\u55EF\uFF1F\u96BE\u9053\u622A\u56FE\u952E\u4E0D\u662FAlt
       + F4\u2026\u2026\u5417\uFF1F"
-    detailsPicture: {fileID: 0}
+    detailsPicture: {fileID: 2800000, guid: a7d389497b23f20458ee5d7af10399f9, type: 3}
     stuffIcon: {fileID: 0}
     canCollectedInBackpack: 0
   - stuffType: 13
     stuffName: "\u4FE1\u606F\u5C55\u793A\u7A97\u53E3"
     describe: "\u62AB\u9732\u7740\u9700\u8981\u8BA9\u6240\u6709\u4EBA\u77E5\u9053\u7684\u91CD\u8981\u4FE1\u606F\r\n\u771F\u6B63\u91CD\u8981\u7684\u4FE1\u606F\u4F1A\u88AB\u6BEB\u65E0\u4FDD\u7559\u5730\u5C55\u793A\u5417\uFF1F\r\n\u6536\u96C6\u4FE1\u606F\u624D\u80FD\u589E\u52A0\u5B58\u6D3B\u7684\u53EF\u80FD\u6027"
-    detailsPicture: {fileID: 0}
+    detailsPicture: {fileID: 2800000, guid: 0eee82047e803fa439031725eb8e56bd, type: 3}
     stuffIcon: {fileID: 0}
     canCollectedInBackpack: 0
   - stuffType: 14
@@ -151,5 +151,17 @@ MonoBehaviour:
     stuffName: "\u751F\u547D\u7684\u56DA\u7B3C"
     describe: "\u53EF\u7528\u4E8E\u56FA\u5B9A\u4E00\u4E9B\u751F\u7269\r\n\u56DA\u7981\u5176\u4E2D\u7684\u751F\u7269\u65E0\u6CD5\u4E3B\u52A8\u9003\u79BB\r\n\u4E0D\u6E05\u695A\u5176\u8FD0\u4F5C\u539F\u7406"
     detailsPicture: {fileID: 0}
+    stuffIcon: {fileID: 0}
+    canCollectedInBackpack: 0
+  - stuffType: 24
+    stuffName: 
+    describe: 
+    detailsPicture: {fileID: 2800000, guid: dd72f2ecfa0604641957fc3fdf69e098, type: 3}
+    stuffIcon: {fileID: 0}
+    canCollectedInBackpack: 0
+  - stuffType: 25
+    stuffName: 
+    describe: 
+    detailsPicture: {fileID: 2800000, guid: ab3a13f1680ebc54291999618b9b9719, type: 3}
     stuffIcon: {fileID: 0}
     canCollectedInBackpack: 0
