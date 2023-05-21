@@ -14,6 +14,7 @@ public class GameItem : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("HIHIHIHI");
         PlayerManager.Instance.Triggered("to touch",gameItem);
     }
 
