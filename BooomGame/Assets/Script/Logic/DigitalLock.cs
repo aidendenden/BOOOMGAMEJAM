@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class DigitalLock : MonoBehaviour
 {
     private string _input = "";
-    private const string Password = "1234";
+    private const string Password = "0451";
 
     public void EnterDigit(string digit)
     {
