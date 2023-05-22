@@ -9,13 +9,13 @@ public class DigitalLock : MonoBehaviour
 
     public void EnterDigit(string digit)
     {
-        _input += digit;
         if (_input.Length > 4)
         {
             Debug.Log("密码超出大小");
             return;
             //input = input.Substring(1);
         }
+         _input += digit;
         CheckPassword();
     }
 
