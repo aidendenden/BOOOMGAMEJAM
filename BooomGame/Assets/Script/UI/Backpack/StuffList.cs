@@ -19,8 +19,9 @@ public class StuffInfo
     public StuffEnum stuffType;
     [Tooltip("物品名称")]
     public string stuffName;
-    [Tooltip("物品描述")]
+    [Tooltip("物品描述"), Multiline(5)]
     public string describe;
+    public Texture2D detailsPicture;
     [Tooltip("物品图标")]
     public Texture2D stuffIcon;
     [Tooltip("能否收集进入背包")]
