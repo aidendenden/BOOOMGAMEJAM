@@ -59,7 +59,7 @@ public class BackpackUIView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         //}
     }
 
-    #region Êó±êÊÂ¼þ
+    #region é¼ æ ‡äº‹ä»¶
     public void OnPointerExit(PointerEventData eventData)
     {
         openBackPack = false;

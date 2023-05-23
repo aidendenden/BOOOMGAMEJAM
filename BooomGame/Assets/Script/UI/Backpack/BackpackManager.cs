@@ -10,15 +10,15 @@ public class BackpackManager : MonoBehaviour
     public BackpackUIView backpackUIView;
     public Action<StuffEnum> OnBackpackStuffCheckClick;
 
-    #region UIÄÚ²¿´úÂë
+    #region UIå†…éƒ¨ä»£ç 
     private List<StuffEnum> backpackItemsIDList = new List<StuffEnum>();
     private void Awake()
     {
         Instance = this;
 
-        //backpackItemsIDList.Add(StuffEnum.Æ¤´ø¹·Éş);
-        //backpackItemsIDList.Add(StuffEnum.ÆÆÆÆÀÃÀÃµÄµÄÍæ¾ß);
-        //backpackItemsIDList.Add(StuffEnum.³éÌëÀïµÄ¹·ÁãÊ³);
+        //backpackItemsIDList.Add(StuffEnum.çš®å¸¦ç‹—ç»³);
+        //backpackItemsIDList.Add(StuffEnum.ç ´ç ´çƒ‚çƒ‚çš„çš„ç©å…·);
+        //backpackItemsIDList.Add(StuffEnum.æŠ½å±‰é‡Œçš„ç‹—é›¶é£Ÿ);
         backpackUIView.getItemIDList = () => { return backpackItemsIDList; };
 
         InteractionLogic.Instance.CollectedInBackpack += PushStuffInBackPack;
@@ -26,14 +26,14 @@ public class BackpackManager : MonoBehaviour
 
     #endregion
 
-    #region Íâ²¿µ÷ÓÃ
+    #region å¤–éƒ¨è°ƒç”¨
 
     public List<StuffEnum> BackpackStuff
     {
         get => backpackItemsIDList;
     }
     /// <summary>
-    /// ½«ÎïÆ··Å½ø±³°ü
+    /// å°†ç‰©å“æ”¾è¿›èƒŒåŒ…
     /// </summary>
     /// <param name="stuffEnum"></param>
     public void PushStuffInBackPack(StuffEnum stuffEnum)
