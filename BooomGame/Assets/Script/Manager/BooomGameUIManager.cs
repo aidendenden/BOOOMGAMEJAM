@@ -22,10 +22,10 @@ public class BooomGameUIManager : MonoBehaviour
         BackpackManager.Instance.OnBackpackStuffCheckClick = OnBackpackItemViewClick;
     }
     /// <summary>
-    /// ÉèÖÃ¾¯¾õÌõUI£¬×îĞ¡ÖµÎª0£¬×î´óÖµÎª1
+    /// è®¾ç½®è­¦è§‰æ¡UIï¼Œæœ€å°å€¼ä¸º0ï¼Œæœ€å¤§å€¼ä¸º1
     /// </summary>
-    /// <param name="currentValue">µ±Ç°ÊıÖµ</param>
-    /// <param name="maxValue">¼Æ»®×î´óÊıÖµ</param>
+    /// <param name="currentValue">å½“å‰æ•°å€¼</param>
+    /// <param name="maxValue">è®¡åˆ’æœ€å¤§æ•°å€¼</param>
     public void SetAlertBarValue(float currentValue, float maxValue = 1f)
     {
         float sliderValue = 0;
@@ -37,7 +37,7 @@ public class BooomGameUIManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ±³°üÄÚÎïÆ·µã»÷
+    /// èƒŒåŒ…å†…ç‰©å“ç‚¹å‡»
     /// </summary>
     /// <param name="stuffEnum"></param>
     public void OnBackpackItemViewClick(StuffEnum stuffEnum)
@@ -45,10 +45,10 @@ public class BooomGameUIManager : MonoBehaviour
         Debug.Log(stuffEnum + "--OnClicked!!!");
         switch (stuffEnum)
         {
-            case StuffEnum.Æ¤´ø¹·Éş:
-            case StuffEnum.ÆÆÆÆÀÃÀÃµÄµÄÍæ¾ß:
-            case StuffEnum.³éÌëÀïµÄ¹·ÁãÊ³:
-            case StuffEnum.¹·¹ÇÍ·:
+            case StuffEnum.çš®å¸¦ç‹—ç»³:
+            case StuffEnum.ç ´ç ´çƒ‚çƒ‚çš„çš„ç©å…·:
+            case StuffEnum.æŠ½å±‰é‡Œçš„ç‹—é›¶é£Ÿ:
+            case StuffEnum.ç‹—éª¨å¤´:
                 var item = StuffInfo.GetStuffInfo(stuffEnum);
                 if (item != null)
                 {
@@ -60,7 +60,7 @@ public class BooomGameUIManager : MonoBehaviour
     }
 
     /// <summary>
-    /// µã»÷ºó¸ù¾İUI×´Ì¬½øĞĞÕ¹Ê¾
+    /// ç‚¹å‡»åæ ¹æ®UIçŠ¶æ€è¿›è¡Œå±•ç¤º
     /// </summary>
     /// <param name="item"></param>
     /// <returns></returns>
