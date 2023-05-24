@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Random = System.Random;
+using Random =  UnityEngine.Random;
 
 public class GameInputManage : MonoBehaviour
 {
@@ -89,10 +89,7 @@ public class GameInputManage : MonoBehaviour
         {
             PlayerManager.Instance.PlaySound("PlayerMove",transform);
 
-            Random random = new Random();
-            int _next=random.Next(0, 6);
-
-            _audioSource.clip =FootAudioClips[_next];
+            _audioSource.clip =FootAudioClips[Random.Range(0,6)];
             _audioSource.Play();
             
             if (_audioSource.isActiveAndEnabled == false)
