@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 /// <summary>
-/// ÕâÀïÊÇ´ı»ú×´Ì¬
+/// è¿™é‡Œæ˜¯å¾…æœºçŠ¶æ€
 /// </summary>
 public class IdleState : IState
 {
@@ -34,7 +34,7 @@ public class IdleState : IState
             manager.TransitionState(StateType.Walking);
         }
 
-        if(_parameter.chaseTarget != null)//Èç¹ûÓĞ×·»÷Ä¿±ê¾Í½øÈë×·»÷×´Ì¬
+        if(_parameter.chaseTarget != null)//å¦‚æœæœ‰è¿½å‡»ç›®æ ‡å°±è¿›å…¥è¿½å‡»çŠ¶æ€
         {
             manager.TransitionState(StateType.Chase);
         }
@@ -49,7 +49,7 @@ public class IdleState : IState
 
 
 /// <summary>
-/// ÕâÀïÊÇÑ²Âß×´Ì¬
+/// è¿™é‡Œæ˜¯å·¡é€»çŠ¶æ€
 /// </summary>
 public class WalkState : IState
 {
@@ -78,7 +78,7 @@ public class WalkState : IState
             manager.TransitionState(StateType.Idle);
         }
 
-        if (_parameter.chaseTarget != null)//Èç¹ûÓĞ×·»÷Ä¿±ê¾Í½øÈë×·»÷×´Ì¬
+        if (_parameter.chaseTarget != null)//å¦‚æœæœ‰è¿½å‡»ç›®æ ‡å°±è¿›å…¥è¿½å‡»çŠ¶æ€
         {
             manager.TransitionState(StateType.Chase);
         }
@@ -98,7 +98,7 @@ public class WalkState : IState
 
 
 /// <summary>
-/// ÕâÀïÊÇ×·»÷×´Ì¬
+/// è¿™é‡Œæ˜¯è¿½å‡»çŠ¶æ€
 /// </summary>
 public class ChaseState : IState
 {

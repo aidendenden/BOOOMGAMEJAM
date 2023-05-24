@@ -32,7 +32,7 @@ public class FSMforSuGuan : MonoBehaviour
 
     private IState currenState;
 
-    public Transform player;
+    private Transform player;
 
 
     
@@ -45,12 +45,10 @@ public class FSMforSuGuan : MonoBehaviour
         states.Add(StateType.Walking, new WalkState(this));
         states.Add(StateType.Chase, new ChaseState(this));
 
-
-
+        
         TransitionState(StateType.Idle);//进入待机状态
 
-
-
+        
         //获取动画组件
         if (transform.TryGetComponent<Animator>(out parameter._animator))
         {
@@ -62,18 +60,20 @@ public class FSMforSuGuan : MonoBehaviour
 
         }
         
-
     }
 
    
     void  FixedUpdate()
     {
-        
-        
         currenState.OnUpdate();
+        
         CheckWatchfulness();//检查当前警觉度
-
-
+        
+        PlayerManager.Instance.AddSoundListener(delegate(string soundName,Transform transform)
+        {
+            player=transform;
+        });
+        
 
     }
 
@@ -85,11 +85,8 @@ public class FSMforSuGuan : MonoBehaviour
         }
         currenState = states[type];
         currenState.OnEnter();
-
     }
-
-
-
+    
 
     void CheckWatchfulness()//警觉度检查
     {

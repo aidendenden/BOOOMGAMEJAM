@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour
     public delegate void TriggerEventHandler(string message,StuffEnum gameItem);
     public static event TriggerEventHandler OnTrigger;
     
-    public delegate void SoundEventHandler(string soundName);
+    public delegate void SoundEventHandler(string soundName,Transform transform);
     public static event SoundEventHandler OnPlaySound;
     
     public delegate void WarningEventHandler(string warningName);
@@ -40,11 +40,11 @@ public class PlayerManager : MonoBehaviour
         OnTrigger -= listener;
     }
 
-    public void PlaySound(string soundName)
+    public void PlaySound(string soundName,Transform transform)
     {
         Debug.Log("Playing sound: " + soundName);
         if (OnPlaySound != null)
-            OnPlaySound(soundName);
+            OnPlaySound(soundName,transform);
     }
 
     public void AddSoundListener(SoundEventHandler listener)
