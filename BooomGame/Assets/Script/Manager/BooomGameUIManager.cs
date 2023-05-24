@@ -84,7 +84,8 @@ public class BooomGameUIManager : MonoBehaviour
 
         stuffDetailsImage.DOFade(1, 0.5f);
         stuffDetailsImage.rectTransform.DOScale(1, 0.5f);
-        stuffDetailsImage.sprite = Sprite.Create(item.detailsPicture, new Rect(0, 0, item.detailsPicture.width, item.detailsPicture.height), Vector2.zero);
+        //stuffDetailsImage.sprite = Sprite.Create(item.detailsPicture, new Rect(0, 0, item.detailsPicture.width, item.detailsPicture.height), Vector2.zero);
+        stuffDetailsImage.sprite = item.detailsPicture;
 
     }
 
