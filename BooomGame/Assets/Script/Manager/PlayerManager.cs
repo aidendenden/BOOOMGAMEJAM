@@ -20,6 +20,12 @@ public class PlayerManager : MonoBehaviour
     public delegate void TriggerEventHandler(string message,StuffEnum gameItem);
     public static event TriggerEventHandler OnTrigger;
     
+    public delegate void SoundEventHandler(string soundName);
+    public static event SoundEventHandler OnPlaySound;
+    
+    public delegate void WarningEventHandler(string warningName);
+    public static event WarningEventHandler OnWarning;
+
     public void Triggered(string message,StuffEnum gameItem) {
         Debug.Log("Triggered: " + message);
         if (OnTrigger != null)
@@ -33,7 +39,41 @@ public class PlayerManager : MonoBehaviour
     public void RemoveListener(TriggerEventHandler listener) {
         OnTrigger -= listener;
     }
+
+    public void PlaySound(string soundName)
+    {
+        Debug.Log("Playing sound: " + soundName);
+        if (OnPlaySound != null)
+            OnPlaySound(soundName);
+    }
+
+    public void AddSoundListener(SoundEventHandler listener)
+    {
+        OnPlaySound += listener;
+    }
+
+    public void RemoveSoundListener(SoundEventHandler listener)
+    {
+        OnPlaySound -= listener;
+    }
     
+    public void OnWarningValue(string warningName)
+    {
+        Debug.Log("OnWarningValue: " + warningName);
+        if (OnWarning != null)
+            OnWarning(warningName);
+    }
+
+    public void AddWarningListener(WarningEventHandler listener)
+    {
+        OnWarning += listener;
+    }
+
+    public void RemoveWarningListener(WarningEventHandler listener)
+    {
+        OnWarning -= listener;
+    }
+
 }
 
 #region 监听交互的方法

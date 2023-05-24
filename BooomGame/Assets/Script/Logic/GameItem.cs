@@ -9,16 +9,24 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class GameItem : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField]
-    public StuffEnum gameItem;
+    [SerializeField] public StuffEnum gameItem;
+
+    public bool OnTrigger;
+    public bool OnClick;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        PlayerManager.Instance.Triggered("to touch",gameItem);
+        if (OnClick)
+        {
+            PlayerManager.Instance.Triggered("to touch", gameItem);
+        }
     }
 
-    void OnTriggerEnter(Collider other) {
-        PlayerManager.Instance.Triggered("to TriggerEnter",gameItem);
+    void OnTriggerEnter(Collider other)
+    {
+        if (OnTrigger)
+        {
+            PlayerManager.Instance.Triggered("to TriggerEnter", gameItem);
+        }
     }
-    
 }

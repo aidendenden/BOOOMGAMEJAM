@@ -19,6 +19,12 @@ public sealed class GameManager : MonoBehaviour
         get { return Lazy.Value; }
     }
 
+    
+    public float WatchfulnessMax = 100;//警觉度上限
+    public float watchfulnessNow = 0;
+    public float watchfulnessDownSpeed = 1;//警觉度下降速度
+    
+    
     #region 物品列表
     private static StuffList stuffList;
     /// <summary>
