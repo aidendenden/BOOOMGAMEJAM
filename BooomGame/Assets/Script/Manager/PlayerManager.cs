@@ -23,6 +23,9 @@ public class PlayerManager : MonoBehaviour
     public delegate void SoundEventHandler(string soundName,Transform transform);
     public static event SoundEventHandler OnPlaySound;
     
+    public delegate void WarningEventHandler(string warningName);
+    public static event WarningEventHandler OnWarning;
+
     public void Triggered(string message,StuffEnum gameItem) {
         Debug.Log("Triggered: " + message);
         if (OnTrigger != null)
@@ -54,7 +57,22 @@ public class PlayerManager : MonoBehaviour
         OnPlaySound -= listener;
     }
     
-   
+    public void OnWarningValue(string warningName)
+    {
+        Debug.Log("OnWarningValue: " + warningName);
+        if (OnWarning != null)
+            OnWarning(warningName);
+    }
+
+    public void AddWarningListener(WarningEventHandler listener)
+    {
+        OnWarning += listener;
+    }
+
+    public void RemoveWarningListener(WarningEventHandler listener)
+    {
+        OnWarning -= listener;
+    }
 
 }
 
