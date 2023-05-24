@@ -10,11 +10,14 @@ public class BooomGameUIManager : MonoBehaviour
 
     public Slider alertBar;
     public Image stuffDetailsImage;
+    public Button closeDetailsBtn;
 
     private void Awake()
     {
         Instance = this;
         DontDestroyOnLoad(this);
+
+        closeDetailsBtn.onClick.AddListener(OnCloseDetaiksBtnClick);
     }
 
     private void Start()
@@ -79,5 +82,14 @@ public class BooomGameUIManager : MonoBehaviour
         stuffDetailsImage.rectTransform.DOScale(1, 0.5f);
         stuffDetailsImage.sprite = Sprite.Create(item.detailsPicture, new Rect(0, 0, item.detailsPicture.width, item.detailsPicture.height), Vector2.zero);
 
+    }
+
+    /// <summary>
+    /// 关闭展示UI
+    /// </summary>
+    private void OnCloseDetaiksBtnClick()
+    {
+        stuffDetailsImage.DOFade(0, 0.2f);
+        stuffDetailsImage.rectTransform.DOScale(0, 0.2f);
     }
 }

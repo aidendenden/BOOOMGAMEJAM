@@ -16,9 +16,9 @@ public class BackpackManager : MonoBehaviour
     {
         Instance = this;
 
-        //backpackItemsIDList.Add(StuffEnum.皮带狗绳);
-        //backpackItemsIDList.Add(StuffEnum.破破烂烂的的玩具);
-        //backpackItemsIDList.Add(StuffEnum.抽屉里的狗零食);
+        backpackItemsIDList.Add(StuffEnum.皮带狗绳);
+        backpackItemsIDList.Add(StuffEnum.破破烂烂的的玩具);
+        backpackItemsIDList.Add(StuffEnum.抽屉里的狗零食);
         backpackUIView.getItemIDList = () => { return backpackItemsIDList; };
 
         InteractionLogic.Instance.CollectedInBackpack += PushStuffInBackPack;

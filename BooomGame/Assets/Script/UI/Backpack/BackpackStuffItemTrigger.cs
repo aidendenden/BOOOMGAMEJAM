@@ -15,7 +15,7 @@ public class BackpackStuffItemTrigger : MonoBehaviour, /*IPointerClickHandler, *
     private void Awake()
     {
         check?.onClick.AddListener(OnBackpackStuffClick);
-        check.gameObject.SetActive(false);
+        //check.gameObject.SetActive(false);
     }
 
     public void SetStuffItemInfo(StuffInfo stuffInfo)
@@ -42,12 +42,12 @@ public class BackpackStuffItemTrigger : MonoBehaviour, /*IPointerClickHandler, *
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        check.gameObject.SetActive(false);
+        //check.gameObject.SetActive(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (stuffEnum == StuffEnum.Null) return;
-        check.gameObject.SetActive(true);
+        //if (stuffEnum == StuffEnum.Null) return;
+        //check.gameObject.SetActive(true);
     }
 }
