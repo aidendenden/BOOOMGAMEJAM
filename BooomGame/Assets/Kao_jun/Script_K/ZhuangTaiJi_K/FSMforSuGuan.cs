@@ -23,9 +23,7 @@ public class Parameter
 
     public NavMeshAgent naw;
 
-    public float watchfulnessMax = 100;//警觉度上限
-    public float watchfulnessNow = 0;
-    public float watchfulnessDownSpeed = 1;//警觉度下降速度
+    
 }
 
 public class FSMforSuGuan : MonoBehaviour
@@ -96,17 +94,17 @@ public class FSMforSuGuan : MonoBehaviour
     void CheckWatchfulness()//警觉度检查
     {
        // Debug.Log("当前警戒指数" + parameter.watchfulnessNow);
-        if (parameter.watchfulnessNow >= parameter.watchfulnessMax)
+        if (GameManager.Instance.watchfulnessNow >= GameManager.Instance.WatchfulnessMax)
         {
             parameter.chaseTarget = player;//如果警觉度满了，追击目标就是玩家
         }
         else
         {
             parameter.chaseTarget = null;
-            parameter.watchfulnessNow -= parameter.watchfulnessDownSpeed * Time.deltaTime;
-            if (parameter.watchfulnessNow <= 0)
+            GameManager.Instance.watchfulnessNow -= GameManager.Instance.watchfulnessDownSpeed * Time.deltaTime;
+            if (GameManager.Instance.watchfulnessNow <= 0)
             {
-                parameter.watchfulnessNow = 0;
+                GameManager.Instance.watchfulnessNow = 0;
             }
 
         }
