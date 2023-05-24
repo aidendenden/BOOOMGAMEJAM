@@ -16971,3 +16971,10 @@ MonoBehaviour:
   playerLocation: {x: 0, y: 0, z: 0}
   speed: 10
   stopDrag: 50
+  FootAudioClips:
+  - {fileID: 8300000, guid: 43ae027dc445b404f96ba17ca3956ce6, type: 3}
+  - {fileID: 8300000, guid: a5742570d85fd4500b1f1341c37249e6, type: 3}
+  - {fileID: 8300000, guid: 5a43a85e57a0a42debdda432b0962864, type: 3}
+  - {fileID: 8300000, guid: 9dd789459f34b41c180ccb433af57f95, type: 3}
+  - {fileID: 8300000, guid: 69c7a412a6e8341ceb5441a6ebbafad1, type: 3}
+  - {fileID: 8300000, guid: 9e258e1b54b6d4e81bd2d1c03d958f50, type: 3}
