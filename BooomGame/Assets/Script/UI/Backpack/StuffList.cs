@@ -21,9 +21,9 @@ public class StuffInfo
     public string stuffName;
     [Tooltip("物品描述"), Multiline(5)]
     public string describe;
-    public Texture2D detailsPicture;
+    public Sprite detailsPicture;
     [Tooltip("物品图标")]
-    public Texture2D stuffIcon;
+    public Sprite stuffIcon;
     [Tooltip("能否收集进入背包")]
     public bool canCollectedInBackpack;
 
@@ -55,7 +55,7 @@ public class StuffInfo
             stuffType = StuffEnum.Null,
             stuffName = null,
             describe = null,
-            stuffIcon = new Texture2D(1, 1),
+            stuffIcon = null,
             canCollectedInBackpack = false,
         };
     }

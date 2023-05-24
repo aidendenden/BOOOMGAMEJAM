@@ -21,7 +21,8 @@ public class BackpackStuffItemTrigger : MonoBehaviour, /*IPointerClickHandler, *
     public void SetStuffItemInfo(StuffInfo stuffInfo)
     {
         stuffEnum = stuffInfo.stuffType;
-        icon.sprite = Sprite.Create(stuffInfo.stuffIcon, new Rect(0, 0, stuffInfo.stuffIcon.width, stuffInfo.stuffIcon.height), Vector2.zero);
+        //icon.sprite = Sprite.Create(stuffInfo.stuffIcon, new Rect(0, 0, stuffInfo.stuffIcon.width, stuffInfo.stuffIcon.height), Vector2.zero);
+        icon.sprite = stuffInfo.stuffIcon;
         if (stuffInfo.stuffType == StuffEnum.Null)
         {
             icon.color = new Color(1, 1, 1, 0);
