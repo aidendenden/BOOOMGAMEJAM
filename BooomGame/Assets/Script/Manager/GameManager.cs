@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public sealed class GameManager : MonoBehaviour
@@ -21,7 +23,8 @@ public sealed class GameManager : MonoBehaviour
 
     
     public float WatchfulnessMax = 100;//警觉度上限
-    public float watchfulnessNow = 0;
+
+    public float watchfulnessNow;
     public float watchfulnessDownSpeed = 1;//警觉度下降速度
     
     
@@ -42,6 +45,13 @@ public sealed class GameManager : MonoBehaviour
         }
     }
     #endregion
+
+
+    public void ChangeWarningValue(int value)
+    {
+        watchfulnessNow = value;
+    } 
+    
 }
 
 
