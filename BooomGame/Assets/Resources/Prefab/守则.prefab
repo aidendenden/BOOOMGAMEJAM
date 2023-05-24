@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7337340370800263356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -180.81, y: 12.16, z: 100.09}
-  m_LocalScale: {x: 0.39895, y: 0.39895, z: 0.39895}
+  m_LocalScale: {x: 0.18384813, y: 0.18384813, z: 0.18384813}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,3 +112,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameItem: 12
+  OnTrigger: 0
+  OnClick: 1

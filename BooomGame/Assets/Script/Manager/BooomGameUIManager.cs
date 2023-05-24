@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class BooomGameUIManager : MonoBehaviour
     public Slider alertBar;
     public Image stuffDetailsImage;
     public Button closeDetailsBtn;
+    public TMP_Text stuffDetailInfo;
 
     private void Awake()
     {
@@ -23,6 +25,8 @@ public class BooomGameUIManager : MonoBehaviour
     private void Start()
     {
         BackpackManager.Instance.OnBackpackStuffCheckClick = OnBackpackItemViewClick;
+        InteractionLogic.Instance.ShowDetailOnUI += ShowStuffDetail;
+
     }
     /// <summary>
     /// 设置警觉条UI，最小值为0，最大值为1
@@ -39,6 +43,7 @@ public class BooomGameUIManager : MonoBehaviour
         alertBar.value = sliderValue;
     }
 
+    #region 背包内点击事件
     /// <summary>
     /// 背包内物品点击
     /// </summary>
@@ -61,7 +66,6 @@ public class BooomGameUIManager : MonoBehaviour
                 break;
         }
     }
-
     /// <summary>
     /// 点击后根据UI状态进行展示
     /// </summary>
@@ -92,4 +96,27 @@ public class BooomGameUIManager : MonoBehaviour
         stuffDetailsImage.DOFade(0, 0.2f);
         stuffDetailsImage.rectTransform.DOScale(0, 0.2f);
     }
+    #endregion
+
+    #region 场景交互
+    public void ShowStuffDetail(StuffEnum stuffEnum)
+    {
+
+        switch (stuffEnum)
+        {
+            case StuffEnum.门后的守则:
+            case StuffEnum.公告栏:
+            case StuffEnum.卫生间纸条:
+            case StuffEnum.配电室牌:
+                var item = StuffInfo.GetStuffInfo(stuffEnum);
+                if (item != null)
+                {
+                    StartCoroutine(ShowStuffDetails(item));
+                }
+                break;
+        }
+        //stuffDetailInfo.text = "";
+    }
+
+    #endregion
 }

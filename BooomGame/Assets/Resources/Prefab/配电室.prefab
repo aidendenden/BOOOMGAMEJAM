@@ -112,3 +112,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameItem: 24
+  OnTrigger: 0
+  OnClick: 1

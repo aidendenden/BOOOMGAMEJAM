@@ -25,6 +25,16 @@ public class InteractionLogic
 
 
     #region 触发物品事件
+    private Action<StuffEnum> showDetailOnUI;
+    /// <summary>
+    /// 展示物品交互内容
+    /// </summary>
+    public event Action<StuffEnum> ShowDetailOnUI
+    {
+        add => showDetailOnUI += value;
+        remove => showDetailOnUI -= value;
+    }
+
     private Action<StuffEnum> collectedInBackpack;
     /// <summary>
     /// 收集进背包的事件
@@ -71,8 +81,10 @@ public class InteractionLogic
             case StuffEnum.ikun海报:
                 break;
             case StuffEnum.门后的守则:
-                break;
             case StuffEnum.公告栏:
+            case StuffEnum.卫生间纸条:
+            case StuffEnum.配电室牌:
+                showDetailOnUI?.Invoke(stuffEnum);
                 break;
             case StuffEnum.Exit:
                 break;
