@@ -15,6 +15,20 @@ public class BackpackUIView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     RectTransform rectTransform;
     bool openBackPack = false;
+
+    private Action onOpen;
+    public event Action OnOpen
+    {
+        add => onOpen += value;
+        remove => onOpen -= value;
+    }
+    private Action onClose;
+    public event Action OnClose
+    {
+        add => onClose += value;
+        remove => onClose -= value;
+    }
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -24,11 +38,13 @@ public class BackpackUIView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         if (openBackPack)
         {
+            onOpen?.Invoke();
             rectTransform.DOAnchorPosX(-rectTransform.sizeDelta.x, 0.5f);
             RefreshBackContent(getItemIDList?.Invoke());
         }
         else
         {
+            onClose?.Invoke();
             rectTransform.DOAnchorPosX(0f, 0.5f);
         }
     }
