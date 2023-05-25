@@ -84,3 +84,10 @@ public enum StuffEnum
     配电室牌,
     卫生间纸条
 }
+
+public enum TriggerType
+{
+    调查,
+    拉闸,
+    收集
+}

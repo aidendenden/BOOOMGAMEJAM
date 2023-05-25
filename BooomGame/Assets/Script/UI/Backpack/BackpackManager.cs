@@ -8,6 +8,14 @@ public class BackpackManager : MonoBehaviour
     public static BackpackManager Instance { get; private set; }
 
     public BackpackUIView backpackUIView;
+
+    public AudioSource audioSource;
+    public AudioClip open;
+    public AudioClip close;
+    public AudioClip pushIn;
+    public AudioClip showDetail;
+
+
     public Action<StuffEnum> OnBackpackStuffCheckClick;
 
     #region UI内部代码
@@ -22,8 +30,15 @@ public class BackpackManager : MonoBehaviour
         backpackUIView.getItemIDList = () => { return backpackItemsIDList; };
 
         InteractionLogic.Instance.CollectedInBackpack += PushStuffInBackPack;
+
+        backpackUIView.OnOpen += () => PlayAudioClip(open);
+        backpackUIView.OnClose += () => PlayAudioClip(close);
     }
 
+    public void PlayAudioClip(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
     #endregion
 
     #region 外部调用
@@ -42,9 +57,10 @@ public class BackpackManager : MonoBehaviour
         {
             backpackItemsIDList.Add(stuffEnum);
         }
-        
+        PlayAudioClip(pushIn);
     }
     
     #endregion
 
 }
+

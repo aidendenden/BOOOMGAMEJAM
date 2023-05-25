@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,12 +15,17 @@ public class BooomGameUIManager : MonoBehaviour
     public Button closeDetailsBtn;
     public TMP_Text stuffDetailInfo;
 
+    public AudioSource audioSource;
+    public AudioClip showDetail;
+    public AudioClip exitDetail;
+
+    private StuffEnum curStuff;
     private void Awake()
     {
         Instance = this;
         DontDestroyOnLoad(this);
 
-        closeDetailsBtn.onClick.AddListener(OnCloseDetaiksBtnClick);
+        closeDetailsBtn.onClick.AddListener(() => CloseStuffDetail(curStuff));
     }
 
     private void Start()
@@ -62,7 +68,8 @@ public class BooomGameUIManager : MonoBehaviour
                 {
                     StartCoroutine(ShowStuffDetails(item));
                 }
-                
+                BackpackManager.Instance.PlayAudioClip(BackpackManager.Instance.showDetail);
+                curStuff = stuffEnum;
                 break;
         }
     }
@@ -96,6 +103,7 @@ public class BooomGameUIManager : MonoBehaviour
     {
         stuffDetailsImage.DOFade(0, 0.2f);
         stuffDetailsImage.rectTransform.DOScale(0, 0.2f);
+        
     }
     #endregion
 
@@ -114,9 +122,27 @@ public class BooomGameUIManager : MonoBehaviour
                 {
                     StartCoroutine(ShowStuffDetails(item));
                 }
+                audioSource.PlayOneShot(showDetail);
+                curStuff = stuffEnum;
                 break;
         }
-        //stuffDetailInfo.text = "";
+    }
+    public void CloseStuffDetail(StuffEnum stuffEnum)
+    {
+        OnCloseDetaiksBtnClick();
+        switch (stuffEnum)
+        {
+            case StuffEnum.皮带狗绳:
+            case StuffEnum.破破烂烂的的玩具:
+            case StuffEnum.抽屉里的狗零食:
+            case StuffEnum.狗骨头:
+                BackpackManager.Instance.PlayAudioClip(BackpackManager.Instance.pushIn);
+                break;
+            default:
+                audioSource.PlayOneShot(exitDetail);
+                break;
+        }
+        curStuff = StuffEnum.Null;
     }
 
     #endregion
