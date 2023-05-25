@@ -10,6 +10,7 @@ using UnityEngine.EventSystems;
 public class GameItem : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] public StuffEnum gameItem;
+    [SerializeField] public TriggerType triggerType;
 
     public bool OnTrigger;
     public bool OnClick;
@@ -18,7 +19,7 @@ public class GameItem : MonoBehaviour, IPointerClickHandler
     {
         if (OnClick)
         {
-            PlayerManager.Instance.Triggered("to touch", gameItem);
+            PlayerEventManager.Instance.Triggered("to touch", gameItem,triggerType);
         }
     }
 
@@ -26,7 +27,7 @@ public class GameItem : MonoBehaviour, IPointerClickHandler
     {
         if (OnTrigger)
         {
-            PlayerManager.Instance.Triggered("to TriggerEnter", gameItem);
+            PlayerEventManager.Instance.Triggered("to TriggerEnter", gameItem,triggerType);
         }
     }
 }

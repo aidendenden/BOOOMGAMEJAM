@@ -69,7 +69,7 @@ public class FSMforSuGuan : MonoBehaviour
         
         CheckWatchfulness();//检查当前警觉度
         
-        PlayerManager.Instance.AddSoundListener(delegate(string soundName,Transform transform)
+        PlayerEventManager.Instance.AddSoundListener(delegate(string soundName,Transform transform)
         {
             player=transform;
         });

@@ -20,7 +20,7 @@ public class InteractionLogic
 
     private InteractionLogic() 
     {
-        PlayerManager.Instance.AddListener(Interaction);
+        PlayerEventManager.Instance.AddListener(Interaction);
     }
 
 
@@ -51,7 +51,7 @@ public class InteractionLogic
     /// </summary>
     /// <param name="msg"></param>
     /// <param name="stuffEnum"></param>
-    public void Interaction(string msg, StuffEnum stuffEnum)
+    public void Interaction(string msg, StuffEnum stuffEnum,TriggerType triggerType)
     {
         switch (stuffEnum)
         {

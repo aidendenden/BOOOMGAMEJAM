@@ -47,9 +47,9 @@ public sealed class GameManager : MonoBehaviour
     #endregion
 
 
-    public void ChangeWarningValue(int value)
+    public void ChangeAlertnessValue(int value)
     {
-        watchfulnessNow = value;
+        watchfulnessNow += value;
     } 
     
 }

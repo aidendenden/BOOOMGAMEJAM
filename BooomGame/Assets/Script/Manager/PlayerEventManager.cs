@@ -7,26 +7,26 @@ using UnityEngine;
 /// 在这个脚本里的Triggered方法决定传什么
 /// </summary>
 [AddComponentMenu("GameInputManage")]
-public class PlayerManager : MonoBehaviour
+public class PlayerEventManager : MonoBehaviour
 {
-    private static readonly Lazy<PlayerManager> Lazy = new Lazy<PlayerManager>(() => new PlayerManager());
+    private static readonly Lazy<PlayerEventManager> Lazy = new Lazy<PlayerEventManager>(() => new PlayerEventManager());
 
-    private PlayerManager()
+    private PlayerEventManager()
     {
     }
 
-    public static PlayerManager Instance => Lazy.Value;
+    public static PlayerEventManager Instance => Lazy.Value;
 
-    public delegate void TriggerEventHandler(string message,StuffEnum gameItem);
+    public delegate void TriggerEventHandler(string message,StuffEnum gameItem,TriggerType triggerType);
     public static event TriggerEventHandler OnTrigger;
     
     public delegate void SoundEventHandler(string soundName,Transform transform);
     public static event SoundEventHandler OnPlaySound;
     
-    public void Triggered(string message,StuffEnum gameItem) {
+    public void Triggered(string message,StuffEnum gameItem,TriggerType triggerType) {
         Debug.Log("Triggered: " + message);
         if (OnTrigger != null)
-            OnTrigger(message,gameItem);
+            OnTrigger(message,gameItem,triggerType);
     }
 
     public void AddListener(TriggerEventHandler listener) {
