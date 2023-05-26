@@ -17,10 +17,14 @@ public class GameInputManage : MonoBehaviour
     public static GameInputManage Instance => Lazy.Value;
 
     [HideInInspector] public Vector3 playerLocation;
+    public bool isCanMove = true;
     public float speed = 5f;
     private float speedBasic = 5f;//储存玩家初始的速度
     public float stopDrag = 50f;//用于在物理运动中实现缓停
     public List<AudioClip> FootAudioClips;
+
+    public Animator Hand_animator; // 黑手的动画控制器组件
+    
 
     private Vector3 _moveInput;
     private Rigidbody _playerRig;
@@ -68,9 +72,12 @@ public class GameInputManage : MonoBehaviour
 
     void FixedUpdate()
     {
-        SpeedUP();//检测是否按下加速键加速
-        PositionMove();//player移动
-        WalkAnimationController_K(); //判断player动画
+        if (isCanMove)
+        {
+            SpeedUP();//检测是否按下加速键加速
+            PositionMove();//player移动
+            WalkAnimationController_K(); //判断player动画
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -147,10 +154,23 @@ public class GameInputManage : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = speedBasic + 4;
+            PlayerEnd();
         }
         else
         {
             speed = speedBasic;
         }
     }
+
+
+    void PlayerEnd()
+    {
+
+        isCanMove = false;
+
+        Hand_animator.SetTrigger("Over");
+       
+    }
+
+
 }
