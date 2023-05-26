@@ -41,7 +41,7 @@ public class BooomGameUIManager : MonoBehaviour
 
     private void Update()
     {
-        SetAlertBarValue(GameManager.Instance.watchfulnessNow, GameManager.Instance.WatchfulnessMax);
+        SetAlertBarValue(GameManager.Instance.AlertnessValue, GameManager.Instance.AlertnessMax);
     }
 
     /// <summary>
