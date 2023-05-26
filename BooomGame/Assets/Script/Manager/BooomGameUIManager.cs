@@ -13,7 +13,10 @@ public class BooomGameUIManager : MonoBehaviour
     public Slider alertBar;
     public Image stuffDetailsImage;
     public Button closeDetailsBtn;
+
+    public GameObject stuffInfoContent;
     public TMP_Text stuffDetailInfo;
+    public Button stuffDetailCloseBtn;
 
     public AudioSource audioSource;
     public AudioClip showDetail;
@@ -26,14 +29,21 @@ public class BooomGameUIManager : MonoBehaviour
         DontDestroyOnLoad(this);
 
         closeDetailsBtn.onClick.AddListener(() => CloseStuffDetail(curStuff));
+        stuffDetailCloseBtn.onClick.AddListener(() => stuffInfoContent.SetActive(false));
     }
 
     private void Start()
     {
         BackpackManager.Instance.OnBackpackStuffCheckClick = OnBackpackItemViewClick;
-        InteractionLogic.Instance.ShowDetailOnUI += ShowStuffDetail;
+        InteractionLogic.Instance.CheckStuff += ShowStuffDetail;
 
     }
+
+    private void Update()
+    {
+        SetAlertBarValue(GameManager.Instance.watchfulnessNow, GameManager.Instance.WatchfulnessMax);
+    }
+
     /// <summary>
     /// 设置警觉条UI，最小值为0，最大值为1
     /// </summary>
@@ -125,8 +135,42 @@ public class BooomGameUIManager : MonoBehaviour
                 audioSource.PlayOneShot(showDetail);
                 curStuff = stuffEnum;
                 break;
+            case StuffEnum.狗狗防疫本:
+            case StuffEnum.座机:
+            case StuffEnum.亮光的电脑:
+            case StuffEnum.碗:
+            case StuffEnum.暖壶:
+            case StuffEnum.台灯:
+            case StuffEnum.门锁:
+            case StuffEnum.ikun海报:
+            case StuffEnum.Exit:
+            case StuffEnum.宿舍门:
+            case StuffEnum.死路门:
+            case StuffEnum.宿舍自动开水机:
+            case StuffEnum.垃圾:
+            case StuffEnum.暖气片和袜子:
+            case StuffEnum.晾衣叉子:
+            case StuffEnum.密码锁:
+            case StuffEnum.盆栽:
+                //展示文案
+                var info = StuffInfo.GetStuffInfo(stuffEnum);
+                if (info != null)
+                {
+                    StartCoroutine(ShowStuffDetailInfo(info));
+                }
+                break;
         }
     }
+    public IEnumerator ShowStuffDetailInfo(StuffInfo item)
+    {
+        stuffInfoContent.SetActive(true);
+        stuffDetailInfo.text = item.describe;
+
+        yield return new WaitForSeconds(10);
+
+        stuffInfoContent.SetActive(false);
+    }
+
     public void CloseStuffDetail(StuffEnum stuffEnum)
     {
         OnCloseDetaiksBtnClick();
