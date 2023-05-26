@@ -90,7 +90,7 @@ public class GameInputManage : MonoBehaviour
 
         if (_moveInput != Vector3.zero)
         {
-            PlayerEventManager.Instance.PlaySound("PlayerMove",transform);
+            PlayerEventManager.Instance.Triggered("PlayerMove",StuffEnum.Null,TriggerType.Null,transform);
 
             if (_audioSource.isPlaying == false)
             {
