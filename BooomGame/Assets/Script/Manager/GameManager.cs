@@ -25,19 +25,30 @@ public sealed class GameManager : MonoBehaviour
     /// 正确密码
     /// </summary>
     public const int CorrectPassword = 0451;
+
     /// <summary>
     /// 解锁密码锁状态 0:默认状态;1:正确;2:错误
     /// </summary>
-    public static int UnlockState = 0;
+    public static int UnlockState
+    {
+        set
+        {
+            if (value==2)
+            {
+                ChangeAlertnessValue(10000000);
+            }
+            UnlockState = value;
+        }        
+    } 
+
     /// <summary>
     /// 是否在交互中 1:交互中;0:不在交互
     /// </summary>
     public static int IsInteracting = 0;
 
-    [FormerlySerializedAs("WatchfulnessMax")] public float AlertnessMax = 100;//警觉度上限
-
-    [FormerlySerializedAs("watchfulnessNow")] public float AlertnessValue;
-    [FormerlySerializedAs("watchfulnessDownSpeed")] public float AlertnessDownSpeed = 1;//警觉度下降速度
+    public static float AlertnessMax = 100;//警觉度上限
+    public static float AlertnessValue; //警觉度
+    public static float AlertnessDownSpeed = 1;//警觉度下降速度
     
     
     #region 物品列表
@@ -59,7 +70,7 @@ public sealed class GameManager : MonoBehaviour
     #endregion
 
 
-    public void ChangeAlertnessValue(int value)
+    public static void ChangeAlertnessValue(int value)
     {
         AlertnessValue += value;
         PlayerEventManager.Instance.Triggered("AlertnessValueHasChange",StuffEnum.Null,TriggerType.Null,null);
