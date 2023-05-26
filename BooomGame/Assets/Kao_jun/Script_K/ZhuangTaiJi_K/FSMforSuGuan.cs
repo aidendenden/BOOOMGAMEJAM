@@ -32,9 +32,9 @@ public class FSMforSuGuan : MonoBehaviour
 
     private IState currenState;
 
-    private Transform player;
+    private Transform SourceOfSound;
 
-
+    public float distance;
     
 
     private Dictionary<StateType, IState> states = new Dictionary<StateType, IState>();
@@ -44,10 +44,8 @@ public class FSMforSuGuan : MonoBehaviour
         states.Add(StateType.Idle, new IdleState(this));
         states.Add(StateType.Walking, new WalkState(this));
         states.Add(StateType.Chase, new ChaseState(this));
-
         
         TransitionState(StateType.Idle);//进入待机状态
-
         
         //获取动画组件
         if (transform.TryGetComponent<Animator>(out parameter._animator))
@@ -60,28 +58,23 @@ public class FSMforSuGuan : MonoBehaviour
 
         }
         
+        PlayerEventManager.Instance.AddListener(delegate(string message, StuffEnum item, TriggerType type,Transform _transform)
+        {
+            if (message is "AlertnessValueHasChange" or "PlayerMove")
+            {
+                SourceOfSound = _transform;
+                JudgmentDistance();
+               
+            }
+        });
+        
     }
 
    
     void  FixedUpdate()
     {
         currenState.OnUpdate();
-        
         CheckWatchfulness();//检查当前警觉度
-
-        PlayerEventManager.Instance.AddListener(delegate(string message, StuffEnum item, TriggerType type,Transform _transform)
-        {
-            if (message == "AlertnessValueHasChange")
-            {
-                player = _transform;
-            }
-
-            if (message=="PlayerMove")
-            {
-                player = _transform;
-            }
-        });
-
     }
 
     public void TransitionState(StateType type)//改变状态
@@ -100,7 +93,7 @@ public class FSMforSuGuan : MonoBehaviour
        // Debug.Log("当前警戒指数" + parameter.watchfulnessNow);
         if (GameManager.Instance.AlertnessValue >= GameManager.Instance.AlertnessMax)
         {
-            parameter.chaseTarget = player;//如果警觉度满了，追击目标就是玩家
+            parameter.chaseTarget = SourceOfSound;//如果警觉度满了，追击目标就是玩家
         }
         else
         {
@@ -113,6 +106,10 @@ public class FSMforSuGuan : MonoBehaviour
 
         }
     }
-    
+
+    public void JudgmentDistance()
+    {
+        distance = Vector3.Distance(SourceOfSound.position, transform.position);        
+    }
 
 }
