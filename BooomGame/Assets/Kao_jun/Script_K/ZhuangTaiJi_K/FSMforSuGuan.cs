@@ -64,7 +64,6 @@ public class FSMforSuGuan : MonoBehaviour
             {
                 SourceOfSound = _transform;
                 JudgmentDistance();
-               
             }
         });
         
@@ -109,7 +108,11 @@ public class FSMforSuGuan : MonoBehaviour
 
     public void JudgmentDistance()
     {
-        distance = Vector3.Distance(SourceOfSound.position, transform.position);        
+        distance = Vector3.Distance(SourceOfSound.position, transform.position);
+        if (distance<5)
+        {
+            GameManager.Instance.ChangeAlertnessValue(10);
+        }
     }
 
 }
