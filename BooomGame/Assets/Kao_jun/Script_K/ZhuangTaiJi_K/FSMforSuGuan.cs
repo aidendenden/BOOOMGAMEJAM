@@ -32,9 +32,9 @@ public class FSMforSuGuan : MonoBehaviour
 
     private IState currenState;
 
-    private Transform player;
+    private Transform SourceOfSound;
 
-
+    public float distance;
     
 
     private Dictionary<StateType, IState> states = new Dictionary<StateType, IState>();
@@ -73,12 +73,12 @@ public class FSMforSuGuan : MonoBehaviour
         {
             if (message == "AlertnessValueHasChange")
             {
-                player = _transform;
+                SourceOfSound = _transform;
             }
 
             if (message=="PlayerMove")
             {
-                player = _transform;
+                SourceOfSound = _transform;
             }
         });
 
@@ -100,7 +100,7 @@ public class FSMforSuGuan : MonoBehaviour
        // Debug.Log("当前警戒指数" + parameter.watchfulnessNow);
         if (GameManager.Instance.AlertnessValue >= GameManager.Instance.AlertnessMax)
         {
-            parameter.chaseTarget = player;//如果警觉度满了，追击目标就是玩家
+            parameter.chaseTarget = SourceOfSound;//如果警觉度满了，追击目标就是玩家
         }
         else
         {
@@ -113,6 +113,10 @@ public class FSMforSuGuan : MonoBehaviour
 
         }
     }
-    
+
+    public void JudgmentDistance()
+    {
+        distance = Vector3.Distance(SourceOfSound.position, transform.position);        
+    }
 
 }
