@@ -82,12 +82,17 @@ public class ConfirmPassword : MonoBehaviour
 
     public void Confirm(string password)
     {
-        if (string.IsNullOrEmpty(password) || password.Length < 4)
-        {
-            Debug.Log("密码长度不正确");
-            return;
-        }
         PlayAudioClip();
+        if (GameManager.CorrectPassword.ToString().Equals(password))
+        {
+            GameManager.UnlockState = 1;
+        }
+        else
+        {
+            GameManager.UnlockState = 2;
+        }
+        gameObject.SetActive(false);
+        GameManager.IsInteracting = 0;
     }
 
     private void PlayAudioClip()

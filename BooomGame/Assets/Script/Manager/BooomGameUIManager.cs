@@ -21,6 +21,8 @@ public class BooomGameUIManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip showDetail;
     public AudioClip exitDetail;
+    
+    public GameObject confirmPassword;
 
     private StuffEnum curStuff;
     private void Awake()
@@ -29,7 +31,11 @@ public class BooomGameUIManager : MonoBehaviour
         DontDestroyOnLoad(this);
 
         closeDetailsBtn.onClick.AddListener(() => CloseStuffDetail(curStuff));
-        stuffDetailCloseBtn.onClick.AddListener(() => stuffInfoContent.SetActive(false));
+        stuffDetailCloseBtn.onClick.AddListener(() => 
+        {
+            GameManager.IsInteracting = 0;
+            stuffInfoContent.SetActive(false);
+        });
     }
 
     private void Start()
@@ -64,7 +70,7 @@ public class BooomGameUIManager : MonoBehaviour
     /// 背包内物品点击
     /// </summary>
     /// <param name="stuffEnum"></param>
-    public void OnBackpackItemViewClick(StuffEnum stuffEnum)
+    private void OnBackpackItemViewClick(StuffEnum stuffEnum)
     {
         Debug.Log(stuffEnum + "--OnClicked!!!");
         switch (stuffEnum)
@@ -82,6 +88,7 @@ public class BooomGameUIManager : MonoBehaviour
                 curStuff = stuffEnum;
                 break;
         }
+        GameManager.IsInteracting = 1;
     }
     /// <summary>
     /// 点击后根据UI状态进行展示
@@ -150,7 +157,6 @@ public class BooomGameUIManager : MonoBehaviour
             case StuffEnum.垃圾:
             case StuffEnum.暖气片和袜子:
             case StuffEnum.晾衣叉子:
-            case StuffEnum.密码锁:
             case StuffEnum.盆栽:
                 //展示文案
                 var info = StuffInfo.GetStuffInfo(stuffEnum);
@@ -159,16 +165,22 @@ public class BooomGameUIManager : MonoBehaviour
                     StartCoroutine(ShowStuffDetailInfo(info));
                 }
                 break;
+            case StuffEnum.密码锁:
+                confirmPassword.SetActive(true);
+                break;
         }
+        GameManager.IsInteracting = 1;
     }
     public IEnumerator ShowStuffDetailInfo(StuffInfo item)
     {
         stuffInfoContent.SetActive(true);
         stuffDetailInfo.text = item.describe;
+        GameManager.IsInteracting = 1;
 
         yield return new WaitForSeconds(10);
 
         stuffInfoContent.SetActive(false);
+        GameManager.IsInteracting = 0;
     }
 
     public void CloseStuffDetail(StuffEnum stuffEnum)
@@ -187,6 +199,7 @@ public class BooomGameUIManager : MonoBehaviour
                 break;
         }
         curStuff = StuffEnum.Null;
+        GameManager.IsInteracting = 0;
     }
 
     #endregion
