@@ -44,10 +44,8 @@ public class FSMforSuGuan : MonoBehaviour
         states.Add(StateType.Idle, new IdleState(this));
         states.Add(StateType.Walking, new WalkState(this));
         states.Add(StateType.Chase, new ChaseState(this));
-
         
         TransitionState(StateType.Idle);//进入待机状态
-
         
         //获取动画组件
         if (transform.TryGetComponent<Animator>(out parameter._animator))
@@ -60,28 +58,23 @@ public class FSMforSuGuan : MonoBehaviour
 
         }
         
+        PlayerEventManager.Instance.AddListener(delegate(string message, StuffEnum item, TriggerType type,Transform _transform)
+        {
+            if (message is "AlertnessValueHasChange" or "PlayerMove")
+            {
+                SourceOfSound = _transform;
+                JudgmentDistance();
+               
+            }
+        });
+        
     }
 
    
     void  FixedUpdate()
     {
         currenState.OnUpdate();
-        
         CheckWatchfulness();//检查当前警觉度
-
-        PlayerEventManager.Instance.AddListener(delegate(string message, StuffEnum item, TriggerType type,Transform _transform)
-        {
-            if (message == "AlertnessValueHasChange")
-            {
-                SourceOfSound = _transform;
-            }
-
-            if (message=="PlayerMove")
-            {
-                SourceOfSound = _transform;
-            }
-        });
-
     }
 
     public void TransitionState(StateType type)//改变状态
