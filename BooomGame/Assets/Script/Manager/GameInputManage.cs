@@ -23,21 +23,29 @@ public class GameInputManage : MonoBehaviour
     public float stopDrag = 50f;//用于在物理运动中实现缓停
     public List<AudioClip> FootAudioClips;
 
+
     public Animator Hand_animator; // 黑手的动画控制器组件
-    
+    public Animator Tui_animator; // 推手的动画控制器组件
+    public Animator Black_animator; // 超级黑手的动画控制器组件
+
 
     private Vector3 _moveInput;
     private Rigidbody _playerRig;
     private Animator _animator;
     private AudioSource _audioSource;
+
    
     private float _stopXk, _stopYk; //用于储存输入的方向传给animator中判断方向
     private static readonly int IsRunning = Animator.StringToHash("isRunning");
     private static readonly int InputX = Animator.StringToHash("inputX");
     private static readonly int InputY = Animator.StringToHash("inputY");
 
+    private bool isEnd = false;
+
     private void Start()
     {
+        GameManager.IsInteracting = 0;
+        isEnd = false;
         speedBasic = speed;
 
         if (transform.TryGetComponent<Rigidbody>(out _playerRig))
@@ -100,7 +108,7 @@ public class GameInputManage : MonoBehaviour
 
         if (_moveInput != Vector3.zero)
         {
-            PlayerEventManager.Instance.Triggered("PlayerMove",StuffEnum.Null,TriggerType.Null,transform);
+           // PlayerEventManager.Instance.Triggered("PlayerMove",StuffEnum.Null,TriggerType.Null,transform);
 
             if (_audioSource.isPlaying == false)
             {
@@ -166,14 +174,23 @@ public class GameInputManage : MonoBehaviour
     }
 
 
-    void PlayerEnd()
+  void PlayerEnd()
     {
-
-        isCanMove = false;
+        isEnd = true;
+        GameManager.IsInteracting = 1;
 
         Hand_animator.SetTrigger("Over");
-       
+        Tui_animator.SetTrigger("Over");
+        Black_animator.SetTrigger("Over");
+
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("SuGuan")&&isEnd==false)
+        {
+            PlayerEnd();
+        }
+    }
 
 }

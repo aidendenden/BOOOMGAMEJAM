@@ -57,7 +57,9 @@ public class FSMforSuGuan : MonoBehaviour
             Debug.Log("Could not find Animator component");
 
         }
-        
+
+       
+
         PlayerEventManager.Instance.AddListener(delegate(string message, StuffEnum item, TriggerType type,Transform _transform)
         {
             if (message is "AlertnessValueHasChange" or "PlayerMove")
@@ -108,11 +110,13 @@ public class FSMforSuGuan : MonoBehaviour
 
     public void JudgmentDistance()
     {
-        distance = Vector3.Distance(SourceOfSound.position, transform.position);
+         distance = Vector3.Distance(SourceOfSound.position, transform.position);
         if (distance<5)
         {
-            GameManager.ChangeAlertnessValue(10);
+            GameManager.ChangeAlertnessValue(10,transform);
         }
     }
+
+   
 
 }

@@ -14,7 +14,7 @@ public class AlertnessLogic : MonoBehaviour, IPointerClickHandler
     {
         if (OnClick)
         {
-            GameManager.ChangeAlertnessValue(每次增加的数值);
+            GameManager.ChangeAlertnessValue(每次增加的数值,transform);
         }
     }
 
@@ -22,7 +22,7 @@ public class AlertnessLogic : MonoBehaviour, IPointerClickHandler
     {
         if (OnTrigger)
         {
-            GameManager.ChangeAlertnessValue(每次增加的数值);
+            GameManager.ChangeAlertnessValue(每次增加的数值,transform);
         }
     }
 }

@@ -35,7 +35,7 @@ public sealed class GameManager : MonoBehaviour
         {
             if (value==2)
             {
-                ChangeAlertnessValue(10000000);
+                ChangeAlertnessValue(10000000,null);
             }
             UnlockState = value;
         }        
@@ -70,10 +70,10 @@ public sealed class GameManager : MonoBehaviour
     #endregion
 
 
-    public static void ChangeAlertnessValue(int value)
+    public static void ChangeAlertnessValue(int value,Transform _t)
     {
         AlertnessValue += value;
-        PlayerEventManager.Instance.Triggered("AlertnessValueHasChange",StuffEnum.Null,TriggerType.Null,null);
+        PlayerEventManager.Instance.Triggered("AlertnessValueHasChange",StuffEnum.Null,TriggerType.Null,_t);
     } 
     
 }
