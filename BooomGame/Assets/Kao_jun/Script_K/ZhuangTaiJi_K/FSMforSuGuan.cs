@@ -69,11 +69,18 @@ public class FSMforSuGuan : MonoBehaviour
         
         CheckWatchfulness();//检查当前警觉度
         
-        PlayerManager.Instance.AddSoundListener(delegate(string soundName,Transform transform)
+        PlayerEventManager.Instance.AddSoundListener(delegate(string soundName,Transform transform)
         {
             player=transform;
         });
         
+        PlayerEventManager.Instance.AddListener(delegate(string message, StuffEnum item, TriggerType type)
+        {
+            if (message == "AlertnessValueHasChange")
+            {
+                player = transform;
+            }
+        });
 
     }
 
@@ -91,17 +98,17 @@ public class FSMforSuGuan : MonoBehaviour
     void CheckWatchfulness()//警觉度检查
     {
        // Debug.Log("当前警戒指数" + parameter.watchfulnessNow);
-        if (GameManager.Instance.watchfulnessNow >= GameManager.Instance.WatchfulnessMax)
+        if (GameManager.Instance.AlertnessValue >= GameManager.Instance.AlertnessMax)
         {
             parameter.chaseTarget = player;//如果警觉度满了，追击目标就是玩家
         }
         else
         {
             parameter.chaseTarget = null;
-            GameManager.Instance.watchfulnessNow -= GameManager.Instance.watchfulnessDownSpeed * Time.deltaTime;
-            if (GameManager.Instance.watchfulnessNow <= 0)
+            GameManager.Instance.AlertnessValue -= GameManager.Instance.AlertnessDownSpeed * Time.deltaTime;
+            if (GameManager.Instance.AlertnessValue <= 0)
             {
-                GameManager.Instance.watchfulnessNow = 0;
+                GameManager.Instance.AlertnessValue = 0;
             }
 
         }

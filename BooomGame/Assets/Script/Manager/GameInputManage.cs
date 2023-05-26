@@ -18,6 +18,7 @@ public class GameInputManage : MonoBehaviour
 
     [HideInInspector] public Vector3 playerLocation;
     public float speed = 5f;
+    private float speedBasic = 5f;//储存玩家初始的速度
     public float stopDrag = 50f;//用于在物理运动中实现缓停
     public List<AudioClip> FootAudioClips;
 
@@ -33,6 +34,8 @@ public class GameInputManage : MonoBehaviour
 
     private void Start()
     {
+        speedBasic = speed;
+
         if (transform.TryGetComponent<Rigidbody>(out _playerRig))
         {
             Debug.Log("Found Rigidbody component: " + _playerRig.name);
@@ -65,7 +68,7 @@ public class GameInputManage : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+        SpeedUP();//检测是否按下加速键加速
         PositionMove();//player移动
         WalkAnimationController_K(); //判断player动画
     }
@@ -87,10 +90,21 @@ public class GameInputManage : MonoBehaviour
 
         if (_moveInput != Vector3.zero)
         {
-            PlayerManager.Instance.PlaySound("PlayerMove",transform);
+            PlayerEventManager.Instance.PlaySound("PlayerMove",transform);
 
-            _audioSource.clip =FootAudioClips[Random.Range(0,6)];
-            _audioSource.Play();
+            if (_audioSource.isPlaying == false)
+            {
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    _audioSource.clip = FootAudioClips[Random.Range(4, 6)];
+                    _audioSource.PlayOneShot(_audioSource.clip);
+                }
+                else
+                {
+                    _audioSource.clip = FootAudioClips[Random.Range(0, 4)];
+                    _audioSource.PlayOneShot(_audioSource.clip);
+                }
+            };
             
             if (_audioSource.isActiveAndEnabled == false)
             {
@@ -128,4 +142,15 @@ public class GameInputManage : MonoBehaviour
         playerLocation = position;
     }
 
+    void SpeedUP()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = speedBasic + 4;
+        }
+        else
+        {
+            speed = speedBasic;
+        }
+    }
 }
