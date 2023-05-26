@@ -68,6 +68,10 @@ public class GameInputManage : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (GameManager.IsInteracting==1)
+        {
+            return;
+        }
         SpeedUP();//检测是否按下加速键加速
         PositionMove();//player移动
         WalkAnimationController_K(); //判断player动画
