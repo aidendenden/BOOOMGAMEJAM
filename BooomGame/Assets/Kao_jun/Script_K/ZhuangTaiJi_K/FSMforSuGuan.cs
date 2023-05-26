@@ -68,17 +68,17 @@ public class FSMforSuGuan : MonoBehaviour
         currenState.OnUpdate();
         
         CheckWatchfulness();//检查当前警觉度
-        
-        PlayerEventManager.Instance.AddSoundListener(delegate(string soundName,Transform transform)
-        {
-            player=transform;
-        });
-        
-        PlayerEventManager.Instance.AddListener(delegate(string message, StuffEnum item, TriggerType type)
+
+        PlayerEventManager.Instance.AddListener(delegate(string message, StuffEnum item, TriggerType type,Transform _transform)
         {
             if (message == "AlertnessValueHasChange")
             {
-                player = transform;
+                player = _transform;
+            }
+
+            if (message=="PlayerMove")
+            {
+                player = _transform;
             }
         });
 

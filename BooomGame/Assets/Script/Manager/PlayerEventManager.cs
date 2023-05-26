@@ -17,16 +17,15 @@ public class PlayerEventManager : MonoBehaviour
 
     public static PlayerEventManager Instance => Lazy.Value;
 
-    public delegate void TriggerEventHandler(string message,StuffEnum gameItem,TriggerType triggerType);
+    public delegate void TriggerEventHandler(string message,StuffEnum gameItem,TriggerType triggerType,Transform _transform);
     public static event TriggerEventHandler OnTrigger;
     
-    public delegate void SoundEventHandler(string soundName,Transform transform);
-    public static event SoundEventHandler OnPlaySound;
+
     
-    public void Triggered(string message,StuffEnum gameItem,TriggerType triggerType) {
+    public void Triggered(string message,StuffEnum gameItem,TriggerType triggerType,Transform _transform) {
         Debug.Log("Triggered: " + message);
         if (OnTrigger != null)
-            OnTrigger(message,gameItem,triggerType);
+            OnTrigger(message,gameItem,triggerType,_transform);
     }
 
     public void AddListener(TriggerEventHandler listener) {
@@ -36,26 +35,7 @@ public class PlayerEventManager : MonoBehaviour
     public void RemoveListener(TriggerEventHandler listener) {
         OnTrigger -= listener;
     }
-
-    public void PlaySound(string soundName,Transform transform)
-    {
-        Debug.Log("Playing sound: " + soundName);
-        if (OnPlaySound != null)
-            OnPlaySound(soundName,transform);
-    }
-
-    public void AddSoundListener(SoundEventHandler listener)
-    {
-        OnPlaySound += listener;
-    }
-
-    public void RemoveSoundListener(SoundEventHandler listener)
-    {
-        OnPlaySound -= listener;
-    }
     
-   
-
 }
 
 #region 监听交互的方法

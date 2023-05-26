@@ -51,7 +51,7 @@ public class InteractionLogic
     /// </summary>
     /// <param name="msg"></param>
     /// <param name="stuffEnum"></param>
-    public void Interaction(string msg, StuffEnum stuffEnum,TriggerType triggerType)
+    public void Interaction(string msg, StuffEnum stuffEnum,TriggerType triggerType,Transform _transform)
     {
         switch (stuffEnum)
         {

@@ -19,7 +19,7 @@ public class GameItem : MonoBehaviour, IPointerClickHandler
     {
         if (OnClick)
         {
-            PlayerEventManager.Instance.Triggered("to touch", gameItem,triggerType);
+            PlayerEventManager.Instance.Triggered("to touch", gameItem,triggerType,null);
         }
     }
 
@@ -27,7 +27,7 @@ public class GameItem : MonoBehaviour, IPointerClickHandler
     {
         if (OnTrigger)
         {
-            PlayerEventManager.Instance.Triggered("to TriggerEnter", gameItem,triggerType);
+            PlayerEventManager.Instance.Triggered("to TriggerEnter", gameItem,triggerType,null);
         }
     }
 }
