@@ -4,6 +4,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public sealed class GameManager : MonoBehaviour
 {
@@ -22,10 +23,10 @@ public sealed class GameManager : MonoBehaviour
     }
 
     
-    public float WatchfulnessMax = 100;//警觉度上限
+    [FormerlySerializedAs("WatchfulnessMax")] public float AlertnessMax = 100;//警觉度上限
 
-    public float watchfulnessNow;
-    public float watchfulnessDownSpeed = 1;//警觉度下降速度
+    [FormerlySerializedAs("watchfulnessNow")] public float AlertnessValue;
+    [FormerlySerializedAs("watchfulnessDownSpeed")] public float AlertnessDownSpeed = 1;//警觉度下降速度
     
     
     #region 物品列表
@@ -49,7 +50,7 @@ public sealed class GameManager : MonoBehaviour
 
     public void ChangeAlertnessValue(int value)
     {
-        watchfulnessNow += value;
+        AlertnessValue += value;
     } 
     
 }

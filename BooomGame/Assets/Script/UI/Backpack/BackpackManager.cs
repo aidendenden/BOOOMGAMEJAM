@@ -61,6 +61,5 @@ public class BackpackManager : MonoBehaviour
     }
     
     #endregion
-
 }
 

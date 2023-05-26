@@ -6,13 +6,23 @@ using UnityEngine.EventSystems;
 public class AlertnessLogic : MonoBehaviour, IPointerClickHandler
 {
     public int 每次增加的数值;
+    public bool OnTrigger;
+    public bool OnClick;
+
+    
     public void OnPointerClick(PointerEventData eventData)
     {
-        GameManager.Instance.ChangeAlertnessValue(每次增加的数值);
+        if (OnClick)
+        {
+            GameManager.Instance.ChangeAlertnessValue(每次增加的数值);
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        GameManager.Instance.ChangeAlertnessValue(每次增加的数值);
+        if (OnTrigger)
+        {
+            GameManager.Instance.ChangeAlertnessValue(每次增加的数值);
+        }
     }
 }
