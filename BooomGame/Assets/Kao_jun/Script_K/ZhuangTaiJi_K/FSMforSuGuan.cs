@@ -74,6 +74,13 @@ public class FSMforSuGuan : MonoBehaviour
             player=transform;
         });
         
+        PlayerEventManager.Instance.AddListener(delegate(string message, StuffEnum item, TriggerType type)
+        {
+            if (message == "AlertnessValueHasChange")
+            {
+                player = transform;
+            }
+        });
 
     }
 

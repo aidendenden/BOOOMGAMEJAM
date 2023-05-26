@@ -51,6 +51,7 @@ public sealed class GameManager : MonoBehaviour
     public void ChangeAlertnessValue(int value)
     {
         AlertnessValue += value;
+        PlayerEventManager.Instance.Triggered("AlertnessValueHasChange",StuffEnum.Null,TriggerType.Null);
     } 
     
 }
@@ -88,6 +89,7 @@ public enum StuffEnum
 
 public enum TriggerType
 {
+    Null,
     调查,
     拉闸,
     收集
