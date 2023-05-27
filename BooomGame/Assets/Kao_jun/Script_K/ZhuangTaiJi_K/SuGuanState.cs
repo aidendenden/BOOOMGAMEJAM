@@ -23,7 +23,7 @@ public class IdleState : IState
     public void OnEnter()
     {
         Debug.Log("idle");
-        _parameter._animator.Play("KplayerIdieF");
+       // _parameter._animator.Play("KplayerIdieF");
     }
 
     public void OnUpdate()
@@ -69,7 +69,7 @@ public class WalkState : IState
     {
         Debug.Log("Walk");
         _parameter.naw.speed = 15;
-        _parameter._animator.Play("KplayerRunF");
+        //_parameter._animator.Play("KplayerRunF");
 
       
 
@@ -125,7 +125,7 @@ public class ChaseState : IState
     public void OnEnter()
     {
         Debug.Log("Chase");
-        _parameter._animator.Play("KplayerRunF");
+       // _parameter._animator.Play("KplayerRunF");
         _parameter.naw.speed = 25;
         
     }
