@@ -48,7 +48,7 @@ public sealed class GameManager : MonoBehaviour
 
     public static float AlertnessMax = 100;//警觉度上限
     public static float AlertnessValue; //警觉度
-    public static float AlertnessDownSpeed = 1;//警觉度下降速度
+    public static float AlertnessDownSpeed = 0.5f;//警觉度下降速度
     public static float BiaoZhunDistance = 15;//距离声源的标准距离
 
     public static Transform SuGuant;
@@ -76,7 +76,7 @@ public sealed class GameManager : MonoBehaviour
     #endregion
 
 
-    public static void ChangeAlertnessValue(int value,Transform _t)
+    public static void ChangeAlertnessValue(float value,Transform _t)
     {
         
         if (AlertnessValue < AlertnessMax)

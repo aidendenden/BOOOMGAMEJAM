@@ -27,6 +27,10 @@ public class BackpackStuffItemTrigger : MonoBehaviour, /*IPointerClickHandler, *
         {
             icon.color = new Color(1, 1, 1, 0);
         }
+        else
+        {
+            icon.color = new Color(1, 1, 1, 1);
+        }
     }
 
     private void OnBackpackStuffClick()

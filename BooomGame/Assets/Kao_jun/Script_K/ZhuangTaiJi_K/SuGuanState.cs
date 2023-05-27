@@ -81,7 +81,7 @@ public class WalkState : IState
 
         _parameter.naw.SetDestination(_parameter.WalkPoints[walkPosition].position);
         Debug.Log(walkPosition);
-        if (Vector3.Distance(manager.transform.position, _parameter.WalkPoints[walkPosition].position) < .1f){
+        if (Vector3.Distance(manager.transform.position, _parameter.WalkPoints[walkPosition].position) < .2f){
 
             walkPosition++;
             if (walkPosition >= _parameter.WalkPoints.Length)
@@ -136,6 +136,11 @@ public class ChaseState : IState
         if (_parameter.chaseTarget !=null)
         {
             _parameter.naw.SetDestination(_parameter.chaseTarget.position);
+            if (Vector3.Distance(manager.transform.position, _parameter.chaseTarget.position) < 7f)
+            {
+                _parameter.chaseTarget = null;
+                GameManager.AlertnessValue = 0;
+            }
         }
 
         if(_parameter.chaseTarget == null)

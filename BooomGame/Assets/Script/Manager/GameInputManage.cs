@@ -22,6 +22,7 @@ public class GameInputManage : MonoBehaviour
     private float speedBasic = 5f;//储存玩家初始的速度
     public float stopDrag = 50f;//用于在物理运动中实现缓停
     public List<AudioClip> FootAudioClips;
+    public float SpeedA = 20;//跑步的时候增加警觉度的速率；
 
 
     public Animator Hand_animator; // 黑手的动画控制器组件
@@ -164,6 +165,7 @@ public class GameInputManage : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            GameManager.ChangeAlertnessValue(SpeedA*Time.deltaTime,gameObject.transform);
             speed = speedBasic + 4;
            // PlayerEnd();
         }

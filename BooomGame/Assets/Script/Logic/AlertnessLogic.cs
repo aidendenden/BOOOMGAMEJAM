@@ -42,6 +42,11 @@ public class AlertnessLogic : MonoBehaviour, IPointerClickHandler
                 audioSource.PlayOneShot(audioSource.clip);
                 GameManager.ChangeAlertnessValue(每次增加的数值, _ThisT);
             }
+            if (other.tag == "Player")
+            {
+                audioSource.PlayOneShot(audioSource.clip);
+                GameManager.ChangeAlertnessValue(每次增加的数值*0.1f, _ThisT);
+            }
         }
     }
 
