@@ -53,6 +53,9 @@ public sealed class GameManager : MonoBehaviour
 
     public static Transform SuGuant;
 
+   
+
+   
 
     #region 物品列表
     private static StuffList stuffList;
@@ -90,7 +93,7 @@ public sealed class GameManager : MonoBehaviour
             }
         }
     }
-
+    
     public static float JudgmentDistance(Transform WuPinT)
     {
         SuGuant = GameObject.FindGameObjectWithTag("SuGuan").GetComponent<Transform>();
@@ -98,10 +101,6 @@ public sealed class GameManager : MonoBehaviour
         Debug.Log(BiaoZhunDistance / (BiaoZhunDistance / 2 + distance));
         return BiaoZhunDistance / (BiaoZhunDistance/2+distance);
     }
-
-
-
-
 }
 
 
@@ -133,7 +132,9 @@ public enum StuffEnum
     盆栽,
     配电室牌,
     卫生间纸条,
-    猫
+    猫,
+    电闸,
+    洗手间
 }
 
 public enum TriggerType

@@ -171,3 +171,15 @@ MonoBehaviour:
     detailsPicture: {fileID: 0}
     stuffIcon: {fileID: 0}
     canCollectedInBackpack: 0
+  - stuffType: 28
+    stuffName: 
+    describe: "\u5FC5\u987B\u5207\u65AD...\u7535\u529B\u7CFB\u7EDF"
+    detailsPicture: {fileID: 0}
+    stuffIcon: {fileID: 0}
+    canCollectedInBackpack: 0
+  - stuffType: 27
+    stuffName: 
+    describe: "\u5E9F\u5F03\u80FD\u6E90\u5904\u7406\u7CFB\u7EDF\u7535\u529B\u5DF2\u5207\u65AD"
+    detailsPicture: {fileID: 0}
+    stuffIcon: {fileID: 0}
+    canCollectedInBackpack: 0
