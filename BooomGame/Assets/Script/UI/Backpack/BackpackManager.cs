@@ -55,7 +55,10 @@ public class BackpackManager : MonoBehaviour
     {
         if (!(backpackItemsIDList.Count >= 4))
         {
-            backpackItemsIDList.Add(stuffEnum);
+            if (!backpackItemsIDList.Contains(stuffEnum))
+            {
+                backpackItemsIDList.Add(stuffEnum);
+            }
         }
         PlayAudioClip(pushIn);
     }
