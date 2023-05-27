@@ -22,6 +22,7 @@ public class IdleState : IState
     }
     public void OnEnter()
     {
+        Debug.Log("idle");
         _parameter._animator.Play("KplayerIdieF");
     }
 
@@ -66,15 +67,28 @@ public class WalkState : IState
     }
     public void OnEnter()
     {
+        Debug.Log("Walk");
+        _parameter.naw.speed = 15;
         _parameter._animator.Play("KplayerRunF");
+
+      
+
+       
     }
 
     public void OnUpdate()
     {
-        manager.transform.position = Vector3.MoveTowards(manager.transform.position,_parameter.WalkPoints[walkPosition].position, _parameter.moveSpeed * Time.deltaTime);
 
+        _parameter.naw.SetDestination(_parameter.WalkPoints[walkPosition].position);
+        Debug.Log(walkPosition);
         if (Vector3.Distance(manager.transform.position, _parameter.WalkPoints[walkPosition].position) < .1f){
 
+            walkPosition++;
+            if (walkPosition >= _parameter.WalkPoints.Length)
+            {
+                walkPosition = 0;
+            }
+            Debug.Log(walkPosition);
             manager.TransitionState(StateType.Idle);
         }
 
@@ -86,12 +100,7 @@ public class WalkState : IState
 
     public void OnExit()
     {
-        walkPosition++;
-
-            if(walkPosition >= _parameter.WalkPoints.Length)
-        {
-            walkPosition = 0;
-        }
+       
     }
 }
 
@@ -115,8 +124,10 @@ public class ChaseState : IState
     }
     public void OnEnter()
     {
+        Debug.Log("Chase");
         _parameter._animator.Play("KplayerRunF");
-        GameManager.AlertnessValue += GameManager.AlertnessValue / 2;
+        _parameter.naw.speed = 25;
+        
     }
 
 

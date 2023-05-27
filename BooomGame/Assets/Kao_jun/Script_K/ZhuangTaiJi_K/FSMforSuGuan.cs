@@ -116,11 +116,13 @@ public class FSMforSuGuan : MonoBehaviour
            
             parameter.chaseTarget = parameter.SourceOfSound;//如果警觉度满了，追击目标就是声源
             GameManager.AlertnessValue -= GameManager.AlertnessDownSpeed * Time.deltaTime;
+            Debug.Log(GameManager.AlertnessValue);
         }
         else
         {
             parameter.chaseTarget = null;
             GameManager.AlertnessValue -= GameManager.AlertnessDownSpeed * Time.deltaTime;
+            //Debug.Log(GameManager.AlertnessValue);
             if (GameManager.AlertnessValue <= 0)
             {
                 GameManager.AlertnessValue = 0;

@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2911806398983355707}
   - component: {fileID: 2911806398983355706}
   - component: {fileID: 2911806398983355653}
-  - component: {fileID: 2911806398983355652}
-  m_Layer: 0
+  - component: {fileID: 1835774129}
+  m_Layer: 12
   m_Name: lajitong-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2911806398983355708}
-  m_LocalRotation: {x: -0, y: 0.30632114, z: -0, w: 0.9519283}
+  m_LocalRotation: {x: 0, y: 0.3063184, z: 0, w: 0.95192915}
   m_LocalPosition: {x: -96.2329, y: 2.07, z: 50.12}
   m_LocalScale: {x: 17.368, y: 17.368, z: 1.7368}
   m_ConstrainProportionsScale: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4700fe03b63e50840be2b4574d3eca56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u6BCF\u6B21\u589E\u52A0\u7684\u6570\u503C": 100
+  "\u6BCF\u6B21\u589E\u52A0\u7684\u6570\u503C": 50
   OnTrigger: 1
   OnClick: 0
   _ThisT: {fileID: 0}
@@ -118,8 +118,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.201875, y: 0.10786357, z: 0.6109106}
-  m_Center: {x: 4.142497e-12, y: 0.08442573, z: 0.002021609}
+  m_Size: {x: 0.21898277, y: 0.20232762, z: 0.79310423}
+  m_Center: {x: 0, y: 0.047232084, z: 0}
 --- !u!54 &2911806398983355706
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -232,8 +232,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!136 &2911806398983355652
-CapsuleCollider:
+--- !u!65 &1835774129
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -242,10 +242,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.07025776
-  m_Height: 0.25875
-  m_Direction: 1
-  m_Center: {x: -0.012928759, y: 0, z: 0.17750958}
+  serializedVersion: 2
+  m_Size: {x: 0.201875, y: 0.25875, z: 0.6904762}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2911806399218097725
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2911806399218097724}
   - component: {fileID: 2911806399218097727}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
