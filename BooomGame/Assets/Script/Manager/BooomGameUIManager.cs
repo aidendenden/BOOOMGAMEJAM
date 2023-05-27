@@ -158,6 +158,7 @@ public class BooomGameUIManager : MonoBehaviour
             case StuffEnum.暖气片和袜子:
             case StuffEnum.晾衣叉子:
             case StuffEnum.盆栽:
+            case StuffEnum.猫:
                 //展示文案
                 var info = StuffInfo.GetStuffInfo(stuffEnum);
                 if (info != null)

@@ -132,7 +132,8 @@ public enum StuffEnum
     密码锁,
     盆栽,
     配电室牌,
-    卫生间纸条
+    卫生间纸条,
+    猫
 }
 
 public enum TriggerType

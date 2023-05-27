@@ -165,3 +165,9 @@ MonoBehaviour:
     detailsPicture: {fileID: -1835084759, guid: ab3a13f1680ebc54291999618b9b9719, type: 3}
     stuffIcon: {fileID: 0}
     canCollectedInBackpack: 0
+  - stuffType: 26
+    stuffName: 
+    describe: "\u55B5\uFF01\uFF01\uFF01"
+    detailsPicture: {fileID: 0}
+    stuffIcon: {fileID: 0}
+    canCollectedInBackpack: 0
