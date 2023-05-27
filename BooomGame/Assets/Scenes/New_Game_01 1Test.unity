@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 25325621}
   m_Layer: 0
   m_Name: DiBan (5)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 25338820}
   m_Layer: 0
   m_Name: DiBan (8)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1068,7 +1068,7 @@ GameObject:
   - component: {fileID: 78144800}
   m_Layer: 0
   m_Name: DiBan (9)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1166,7 +1166,7 @@ GameObject:
   - component: {fileID: 78499745}
   m_Layer: 0
   m_Name: 66 (4)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1286,7 +1286,7 @@ Transform:
   - {fileID: 1606115457}
   - {fileID: 1834826429}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &84514424
 GameObject:
@@ -1862,7 +1862,7 @@ GameObject:
   - component: {fileID: 167998390}
   m_Layer: 0
   m_Name: Wlla5
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2466,7 +2466,7 @@ GameObject:
   - component: {fileID: 251410413}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3210,7 +3210,7 @@ GameObject:
   - component: {fileID: 282014060}
   m_Layer: 0
   m_Name: DiBan
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3372,7 +3372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2778069390479272995, guid: e816dc56f71bc8b45a974fc129aa4eb6, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2778069390479272995, guid: e816dc56f71bc8b45a974fc129aa4eb6, type: 3}
       propertyPath: m_LocalScale.x
@@ -4017,7 +4017,7 @@ GameObject:
   - component: {fileID: 340247018}
   m_Layer: 0
   m_Name: DiBan (6)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4270,7 +4270,7 @@ GameObject:
   - component: {fileID: 361383787}
   m_Layer: 0
   m_Name: DiBan (4)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4789,7 +4789,7 @@ GameObject:
   - component: {fileID: 407482238}
   m_Layer: 0
   m_Name: DiBan (5)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4958,7 +4958,7 @@ GameObject:
   - component: {fileID: 416369435}
   m_Layer: 11
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5878,7 +5878,7 @@ GameObject:
   - component: {fileID: 475056325}
   m_Layer: 0
   m_Name: DiBan (1)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7184,7 +7184,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: eebcbe281984bac418d216ea7fedc340, type: 2}
     - target: {fileID: 4773881436295288561, guid: 17a8a5613c849e245a0475bf5cf7ca83, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4773881436295288561, guid: 17a8a5613c849e245a0475bf5cf7ca83, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7744,7 +7744,7 @@ GameObject:
   - component: {fileID: 685255588}
   m_Layer: 0
   m_Name: DiBan (2)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8073,7 +8073,7 @@ GameObject:
   - component: {fileID: 716761739}
   m_Layer: 0
   m_Name: Wlla5 (2)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8238,7 +8238,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7337340370800263352, guid: 93bbf2ba9f08c0d4ba328384fd64721d, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7337340370800263352, guid: 93bbf2ba9f08c0d4ba328384fd64721d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8621,7 +8621,7 @@ GameObject:
   - component: {fileID: 819550841}
   m_Layer: 0
   m_Name: ZouLang3 (2)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8869,120 +8869,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2847706855860476536, guid: eb9b5275d1b563045bd24d6a61c5e0ae, type: 3}
   m_PrefabInstance: {fileID: 836611762}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &847409369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 847409371}
-  - component: {fileID: 847409370}
-  - component: {fileID: 847409372}
-  - component: {fileID: 847409373}
-  m_Layer: 0
-  m_Name: lajitong-1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &847409370
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847409369}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: eebcbe281984bac418d216ea7fedc340, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4621d903385b6a74fa85028c880b05df, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.201875, y: 0.25875}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &847409371
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847409369}
-  m_LocalRotation: {x: -0, y: 0.30632114, z: -0, w: 0.9519283}
-  m_LocalPosition: {x: -96.2329, y: 2.1732, z: 49.72}
-  m_LocalScale: {x: 17.368, y: 17.368, z: 1.7368}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 35.675, z: 0}
---- !u!114 &847409372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847409369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4700fe03b63e50840be2b4574d3eca56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "\u6BCF\u6B21\u589E\u52A0\u7684\u6570\u503C": 50
-  OnTrigger: 0
-  OnClick: 1
---- !u!65 &847409373
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847409369}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.201875, y: 0.25875, z: 0.6743416}
-  m_Center: {x: 3.8514691e-10, y: 0, z: 0.23717067}
 --- !u!1 &868947440
 GameObject:
   m_ObjectHideFlags: 0
@@ -9176,7 +9062,7 @@ GameObject:
   - component: {fileID: 915280019}
   m_Layer: 0
   m_Name: DiBan
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9274,7 +9160,7 @@ GameObject:
   - component: {fileID: 921069859}
   m_Layer: 0
   m_Name: Door (1)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9983,7 +9869,7 @@ GameObject:
   - component: {fileID: 986000542}
   m_Layer: 0
   m_Name: DiBan (10)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10163,7 +10049,7 @@ Transform:
   - {fileID: 1292390590}
   - {fileID: 496002547}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &992169589
 PrefabInstance:
@@ -10831,7 +10717,7 @@ GameObject:
   - component: {fileID: 1037902768}
   m_Layer: 0
   m_Name: 66 (3)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11247,7 +11133,7 @@ GameObject:
   - component: {fileID: 1105373301}
   m_Layer: 0
   m_Name: DiBan (11)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11747,7 +11633,7 @@ Transform:
   - {fileID: 2108132870}
   - {fileID: 27680489}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1133185905
 PrefabInstance:
@@ -11983,7 +11869,7 @@ GameObject:
   - component: {fileID: 1165699890}
   m_Layer: 0
   m_Name: ZouLang3 (3)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12081,7 +11967,7 @@ GameObject:
   - component: {fileID: 1178957165}
   m_Layer: 0
   m_Name: DiBan (6)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12179,7 +12065,7 @@ GameObject:
   - component: {fileID: 1213634582}
   m_Layer: 0
   m_Name: Wlla5 (5)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12510,7 +12396,7 @@ Transform:
   - {fileID: 1030155516}
   - {fileID: 1149816893}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1247161139
 GameObject:
@@ -12546,7 +12432,7 @@ Transform:
   - {fileID: 672446755}
   - {fileID: 1501932517}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1259217586
 GameObject:
@@ -12885,7 +12771,7 @@ GameObject:
   - component: {fileID: 1293012691}
   m_Layer: 0
   m_Name: DiBan (4)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13289,7 +13175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1438168771012809732, guid: 809ff5a2a8a8ae34f86264813f69d016, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1438168771012809732, guid: 809ff5a2a8a8ae34f86264813f69d016, type: 3}
       propertyPath: m_LocalScale.x
@@ -14070,7 +13956,7 @@ Transform:
   m_Children:
   - {fileID: 2134888353}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 4, y: -1.779, z: 0}
 --- !u!114 &1374092407
 MonoBehaviour:
@@ -14087,7 +13973,7 @@ MonoBehaviour:
   m_CollideAgainst:
     serializedVersion: 2
     m_Bits: 2560
-  m_IgnoreTag: Untagged
+  m_IgnoreTag: HuanJin
   m_TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -14276,7 +14162,7 @@ Transform:
   - {fileID: 383295429}
   - {fileID: 779576866}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1389158227
 PrefabInstance:
@@ -14378,7 +14264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1438168771012809732, guid: 809ff5a2a8a8ae34f86264813f69d016, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1438168771012809732, guid: 809ff5a2a8a8ae34f86264813f69d016, type: 3}
       propertyPath: m_LocalScale.x
@@ -14467,7 +14353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2911554041650404845, guid: 9f1ffbede286307429582ce1c3ba7070, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2911554041650404845, guid: 9f1ffbede286307429582ce1c3ba7070, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14529,7 +14415,7 @@ GameObject:
   - component: {fileID: 1406334563}
   m_Layer: 9
   m_Name: ZouLang4 (1)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14935,7 +14821,7 @@ GameObject:
   - component: {fileID: 1442261694}
   m_Layer: 0
   m_Name: DiBan (7)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15034,7 +14920,7 @@ GameObject:
   - component: {fileID: 1451034055}
   m_Layer: 9
   m_Name: ZouLang4
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15372,7 +15258,7 @@ Transform:
   - {fileID: 201789841}
   - {fileID: 1590018451}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485858380
 GameObject:
@@ -15659,7 +15545,7 @@ GameObject:
   - component: {fileID: 1552211333}
   m_Layer: 0
   m_Name: Wlla5 (6)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15757,7 +15643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2255538818412525398, guid: 247cc3e0c38abcf4cb40f7d9cd179277, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2255538818412525398, guid: 247cc3e0c38abcf4cb40f7d9cd179277, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15949,7 +15835,7 @@ Transform:
   - {fileID: 1718705597}
   - {fileID: 1112457097}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1583479793
 PrefabInstance:
@@ -16036,7 +15922,7 @@ GameObject:
   - component: {fileID: 1587397126}
   m_Layer: 9
   m_Name: Wall2
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16234,7 +16120,7 @@ GameObject:
   - component: {fileID: 1595588447}
   - component: {fileID: 1595588446}
   - component: {fileID: 1595588448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: suGUAN (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16477,7 +16363,7 @@ GameObject:
   - component: {fileID: 1619333703}
   m_Layer: 0
   m_Name: DiBan (12)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16688,7 +16574,7 @@ GameObject:
   - component: {fileID: 1624437806}
   m_Layer: 0
   m_Name: 66 (1)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17151,7 +17037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1438168771012809732, guid: 809ff5a2a8a8ae34f86264813f69d016, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1438168771012809732, guid: 809ff5a2a8a8ae34f86264813f69d016, type: 3}
       propertyPath: m_LocalScale.x
@@ -17526,7 +17412,7 @@ GameObject:
   - component: {fileID: 1725618893}
   - component: {fileID: 1725618892}
   - component: {fileID: 1725618894}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PeiDianShi (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17651,7 +17537,7 @@ Transform:
   - {fileID: 38857236}
   - {fileID: 398478708}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737366231
 GameObject:
@@ -17805,7 +17691,7 @@ GameObject:
   - component: {fileID: 1741757224}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18016,7 +17902,7 @@ GameObject:
   - component: {fileID: 1750469887}
   m_Layer: 0
   m_Name: ZouLang2 (2)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18128,7 +18014,7 @@ GameObject:
   - component: {fileID: 1753877725}
   m_Layer: 0
   m_Name: 66 (5)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18227,7 +18113,7 @@ GameObject:
   - component: {fileID: 1758181605}
   m_Layer: 0
   m_Name: ZouLang2 (1)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19470,7 +19356,7 @@ GameObject:
   - component: {fileID: 1890697371}
   m_Layer: 0
   m_Name: DiBan (3)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20022,6 +19908,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1933593310
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2911806398983355708, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_Name
+      value: lajitong-1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -109.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 49.363514
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99169344
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.12862423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -14.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
 --- !u!1 &1950907662
 GameObject:
   m_ObjectHideFlags: 0
@@ -20097,7 +20040,7 @@ GameObject:
   - component: {fileID: 1989349191}
   m_Layer: 0
   m_Name: Wlla5 (3)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20489,7 +20432,7 @@ GameObject:
   - component: {fileID: 2006654329}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21004,7 +20947,7 @@ GameObject:
   - component: {fileID: 2078315511}
   m_Layer: 0
   m_Name: DiBan
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21668,7 +21611,7 @@ GameObject:
   - component: {fileID: 2147109252}
   m_Layer: 0
   m_Name: Wlla5 (1)
-  m_TagString: Untagged
+  m_TagString: HuanJin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23600,6 +23543,63 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!1001 &2911806399226760677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2911806398983355708, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_Name
+      value: lajitong-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -99.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 69.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9519283
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.30632114
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 35.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911806398983355710, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b479cf1234ec2494fb263ef24fb64420, type: 3}
 --- !u!1001 &3182188874826134347
 PrefabInstance:
   m_ObjectHideFlags: 0

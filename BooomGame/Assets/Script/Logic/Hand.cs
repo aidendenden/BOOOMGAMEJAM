@@ -20,8 +20,19 @@ public class Hand : MonoBehaviour
 
         if (b)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
- 
+
+
+    public void ReloadCurrentScene()
+    {
+        // 获取当前场景的索引
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+
+        // 重新加载当前场景
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
 }

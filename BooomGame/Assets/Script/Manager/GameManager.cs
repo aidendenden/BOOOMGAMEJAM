@@ -35,7 +35,7 @@ public sealed class GameManager : MonoBehaviour
         {
             if (value==2)
             {
-                ChangeAlertnessValue(10000000,null);
+                ChangeAlertnessValue(500,null);
             }
             UnlockState = value;
         }        
@@ -48,9 +48,12 @@ public sealed class GameManager : MonoBehaviour
 
     public static float AlertnessMax = 100;//警觉度上限
     public static float AlertnessValue; //警觉度
-    public static float AlertnessDownSpeed = 1;//警觉度下降速度
-    
-    
+    public static float AlertnessDownSpeed = 5;//警觉度下降速度
+    public static float BiaoZhunDistance = 15;//距离声源的标准距离
+
+    public static Transform SuGuant;
+
+
     #region 物品列表
     private static StuffList stuffList;
     /// <summary>
@@ -72,10 +75,32 @@ public sealed class GameManager : MonoBehaviour
 
     public static void ChangeAlertnessValue(int value,Transform _t)
     {
-        AlertnessValue += value;
-        PlayerEventManager.Instance.Triggered("AlertnessValueHasChange",StuffEnum.Null,TriggerType.Null,_t);
-    } 
-    
+        float AlertnessWillAdd = value * GameManager.JudgmentDistance(_t);
+        if (AlertnessValue < AlertnessMax)
+        {
+            if (AlertnessValue + AlertnessWillAdd >= AlertnessMax)
+            {
+                AlertnessValue += AlertnessWillAdd;
+                PlayerEventManager.Instance.Triggered("AlertnessValueHasChange", StuffEnum.Null, TriggerType.Null, _t);
+            }
+            else
+            {
+                AlertnessValue += AlertnessWillAdd;
+            }
+        }
+    }
+
+    public static float JudgmentDistance(Transform WuPinT)
+    {
+        SuGuant = GameObject.FindGameObjectWithTag("SuGuan").GetComponent<Transform>();
+        float distance = Vector3.Distance(WuPinT.position,SuGuant.position);
+        Debug.Log(BiaoZhunDistance / (BiaoZhunDistance / 2 + distance));
+        return BiaoZhunDistance / (BiaoZhunDistance/2+distance);
+    }
+
+
+
+
 }
 
 

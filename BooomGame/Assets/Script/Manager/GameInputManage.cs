@@ -178,6 +178,7 @@ public class GameInputManage : MonoBehaviour
     {
         isEnd = true;
         GameManager.IsInteracting = 1;
+       
 
         Hand_animator.SetTrigger("Over");
         Tui_animator.SetTrigger("Over");

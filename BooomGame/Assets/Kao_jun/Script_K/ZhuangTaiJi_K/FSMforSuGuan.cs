@@ -23,23 +23,32 @@ public class Parameter
 
     public NavMeshAgent naw;
 
-    
+    public Transform SourceOfSound;
+
+    public float distance;
+    public float BiaoZhunDistance = 2;
+
+    public  Transform Self;
+
+  
+
+
 }
 
 public class FSMforSuGuan : MonoBehaviour
 {
+  
+
     public Parameter parameter;
 
     private IState currenState;
 
-    private Transform SourceOfSound;
-
-    public float distance;
-    
+ 
 
     private Dictionary<StateType, IState> states = new Dictionary<StateType, IState>();
     void Start()
     {
+        GameManager.AlertnessValue = 0;
         //注册状态
         states.Add(StateType.Idle, new IdleState(this));
         states.Add(StateType.Walking, new WalkState(this));
@@ -58,14 +67,24 @@ public class FSMforSuGuan : MonoBehaviour
 
         }
 
-       
+        if (transform.TryGetComponent<Transform>(out parameter.Self))
+        {
+            Debug.Log("Found Transform component: " + parameter.Self.name);
+        }
+        else
+        {
+            Debug.Log("Could not find Transform component");
+
+        }
+
+
 
         PlayerEventManager.Instance.AddListener(delegate(string message, StuffEnum item, TriggerType type,Transform _transform)
         {
-            if (message is "AlertnessValueHasChange" or "PlayerMove")
+            if (message =="AlertnessValueHasChange")
             {
-                SourceOfSound = _transform;
-                JudgmentDistance();
+                parameter.SourceOfSound = _transform;
+               
             }
         });
         
@@ -94,7 +113,9 @@ public class FSMforSuGuan : MonoBehaviour
        // Debug.Log("当前警戒指数" + parameter.watchfulnessNow);
         if (GameManager.AlertnessValue >= GameManager.AlertnessMax)
         {
-            parameter.chaseTarget = SourceOfSound;//如果警觉度满了，追击目标就是玩家
+           
+            parameter.chaseTarget = parameter.SourceOfSound;//如果警觉度满了，追击目标就是声源
+            GameManager.AlertnessValue -= GameManager.AlertnessDownSpeed * Time.deltaTime;
         }
         else
         {
@@ -108,14 +129,7 @@ public class FSMforSuGuan : MonoBehaviour
         }
     }
 
-    public void JudgmentDistance()
-    {
-         distance = Vector3.Distance(SourceOfSound.position, transform.position);
-        if (distance<5)
-        {
-            GameManager.ChangeAlertnessValue(10,transform);
-        }
-    }
+    
 
    
 

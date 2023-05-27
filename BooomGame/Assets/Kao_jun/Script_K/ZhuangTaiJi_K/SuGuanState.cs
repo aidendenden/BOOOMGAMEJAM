@@ -116,6 +116,7 @@ public class ChaseState : IState
     public void OnEnter()
     {
         _parameter._animator.Play("KplayerRunF");
+        GameManager.AlertnessValue += GameManager.AlertnessValue / 2;
     }
 
 
