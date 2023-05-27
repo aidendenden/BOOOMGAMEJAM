@@ -86,9 +86,9 @@ public class BooomGameUIManager : MonoBehaviour
                 }
                 BackpackManager.Instance.PlayAudioClip(BackpackManager.Instance.showDetail);
                 curStuff = stuffEnum;
+                GameManager.IsInteracting = 1;
                 break;
         }
-        GameManager.IsInteracting = 1;
     }
     /// <summary>
     /// 点击后根据UI状态进行展示
