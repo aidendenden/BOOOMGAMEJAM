@@ -17478,7 +17478,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374092401}
-  m_LocalRotation: {x: -0.0012128534, y: -0.015528318, z: -0.000018835859, w: 0.9998787}
+  m_LocalRotation: {x: -0.0012128735, y: -0.015528352, z: -0.00001883621, w: 0.9998787}
   m_LocalPosition: {x: -193.96, y: 4.85, z: 26.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18769,10 +18769,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 4.7553635
+  m_Radius: 4.0343475
   m_Height: 15.147799
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0.021606445}
+  m_Center: {x: 0, y: 0, z: 0.7426224}
 --- !u!195 &1463975100 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 1209299520722819529, guid: e816dc56f71bc8b45a974fc129aa4eb6, type: 3}
