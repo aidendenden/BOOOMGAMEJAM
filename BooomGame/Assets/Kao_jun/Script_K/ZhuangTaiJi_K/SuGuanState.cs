@@ -68,7 +68,7 @@ public class WalkState : IState
     public void OnEnter()
     {
         Debug.Log("Walk");
-        _parameter.naw.speed = 15;
+        _parameter.naw.speed = 10;
         //_parameter._animator.Play("KplayerRunF");
 
       
@@ -81,7 +81,7 @@ public class WalkState : IState
 
         _parameter.naw.SetDestination(_parameter.WalkPoints[walkPosition].position);
         //Debug.Log(walkPosition);
-        if (Vector3.Distance(manager.transform.position, _parameter.WalkPoints[walkPosition].position) < .2f){
+        if (Vector3.Distance(manager.transform.position, _parameter.WalkPoints[walkPosition].position) < .5f){
 
             walkPosition++;
             if (walkPosition >= _parameter.WalkPoints.Length)
@@ -126,7 +126,7 @@ public class ChaseState : IState
     {
         Debug.Log("Chase");
        // _parameter._animator.Play("KplayerRunF");
-        _parameter.naw.speed = 25;
+        _parameter.naw.speed = 20;
         
     }
 

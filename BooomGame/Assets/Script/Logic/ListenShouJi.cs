@@ -8,6 +8,11 @@ public class ListenShouJi : MonoBehaviour
     public int itemID;
     Transform Mao;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+       
+    }
     void Start()
     {
         PlayerEventManager.Instance.AddListener(delegate (string message, StuffEnum item, TriggerType type, Transform _transform)
