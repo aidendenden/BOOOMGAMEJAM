@@ -25,7 +25,7 @@ public sealed class GameManager : MonoBehaviour
     /// <summary>
     /// 正确密码
     /// </summary>
-    public const int CorrectPassword = 0451;
+    public const string CorrectPassword = "0451";
 
     /// <summary>
     /// 解锁密码锁状态 0:默认状态;1:正确;2:错误

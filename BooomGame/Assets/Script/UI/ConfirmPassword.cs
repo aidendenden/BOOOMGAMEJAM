@@ -83,7 +83,7 @@ public class ConfirmPassword : MonoBehaviour
     public void Confirm(string password)
     {
         PlayAudioClip();
-        if (GameManager.CorrectPassword.ToString().Equals(password))
+        if (GameManager.CorrectPassword.Equals(password))
         {
             GameManager.UnlockState = 1;
         }
