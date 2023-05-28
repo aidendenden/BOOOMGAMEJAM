@@ -12,7 +12,7 @@ public class ElectricitySwitch : MonoBehaviour
         PlayerEventManager.Instance.AddListener(
             delegate(string message, StuffEnum item, TriggerType type, Transform transform1)
             {
-                if (item==StuffEnum.电闸 && type==TriggerType.拉闸 && airWall!=null)
+                if (item==StuffEnum.座机 && type==TriggerType.拉闸 && airWall!=null)
                 {
                     airWall.SetActive(false);
                 }
