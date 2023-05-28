@@ -159,29 +159,18 @@ public class BooomGameUIManager : MonoBehaviour
             case StuffEnum.晾衣叉子:
             case StuffEnum.盆栽:
             case StuffEnum.猫:
+            case StuffEnum.洗手间:
+            case StuffEnum.电闸:
                 //展示文案
                 var info = StuffInfo.GetStuffInfo(stuffEnum);
                 if (info != null)
                 {
                     StartCoroutine(ShowStuffDetailInfo(info));
                 }
+                curStuff = stuffEnum;
                 break;
             case StuffEnum.密码锁:
                 confirmPassword.SetActive(true);
-                break;
-            case StuffEnum.电闸:
-                var _info = StuffInfo.GetStuffInfo(stuffEnum);
-                if (_info != null)
-                {
-                    StartCoroutine(ShowStuffDetailInfo(_info));
-                }
-                break;
-            case StuffEnum.洗手间:
-                var _ = StuffInfo.GetStuffInfo(stuffEnum);
-                if (_ != null)
-                {
-                    StartCoroutine(ShowStuffDetailInfo(_));
-                }
                 break;
         }
         GameManager.IsInteracting = 1;
