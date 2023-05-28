@@ -57,6 +57,10 @@ public class BackpackManager : MonoBehaviour
         {
             if (!backpackItemsIDList.Contains(stuffEnum))
             {
+                if (stuffEnum == StuffEnum.狗骨头)
+                {
+                   GameManager.Instance.isGetDogBone = true;
+                }
                 backpackItemsIDList.Add(stuffEnum);
             }
         }
