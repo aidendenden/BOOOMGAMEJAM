@@ -22,6 +22,11 @@ public class BackpackManager : MonoBehaviour
     private List<StuffEnum> backpackItemsIDList = new List<StuffEnum>();
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
         Instance = this;
 
         //backpackItemsIDList.Add(StuffEnum.皮带狗绳);

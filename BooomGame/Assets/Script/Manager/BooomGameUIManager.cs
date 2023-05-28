@@ -164,8 +164,6 @@ public class BooomGameUIManager : MonoBehaviour
             case StuffEnum.盆栽:
             case StuffEnum.猫:
             case StuffEnum.洗手间:
-                ShowText(stuffEnum);
-                break;
             case StuffEnum.电闸:
                 //展示文案
                 ShowText(stuffEnum);
