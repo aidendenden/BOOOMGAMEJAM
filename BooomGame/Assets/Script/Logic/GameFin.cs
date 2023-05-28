@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameFin : MonoBehaviour
 {
     public GameObject ui;
-    public Animator animator; // 动画控制器组件
+    public Animator animator; // 渐变动画控制器组件
+    public Animator _animator;//推镜头
     public bool a;
 
 
@@ -15,7 +16,7 @@ public class GameFin : MonoBehaviour
         if (a)
         {
             a = false;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
 
         }
     }

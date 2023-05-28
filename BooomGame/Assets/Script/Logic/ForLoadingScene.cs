@@ -16,6 +16,6 @@ public class ForLoadingScene : MonoBehaviour
     private void DelayedFunction()
     {
         // 在这里编写需要延迟执行的函数的逻辑
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 }
