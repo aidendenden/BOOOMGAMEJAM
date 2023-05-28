@@ -29,11 +29,11 @@ public class BooomGameUIManager : MonoBehaviour
     {
         if (Instance != null)
         {
-            Destroy(this.gameObject);
-            return;
+            Destroy(Instance.gameObject);
+            Instance = null;
         }
         Instance = this;
-        DontDestroyOnLoad(this);
+        // DontDestroyOnLoad(this);
 
         closeDetailsBtn.onClick.AddListener(() => CloseStuffDetail(curStuff));
         stuffDetailCloseBtn.onClick.AddListener(() => 
@@ -216,5 +216,10 @@ public class BooomGameUIManager : MonoBehaviour
         GameManager.IsInteracting = 0;
     }
 
+    private void OnDestroy()
+    {
+        InteractionLogic.Instance.CheckStuff -= ShowStuffDetail;
+        Instance = null;
+    }
     #endregion
 }

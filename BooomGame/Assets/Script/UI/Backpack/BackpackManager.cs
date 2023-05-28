@@ -24,8 +24,8 @@ public class BackpackManager : MonoBehaviour
     {
         if (Instance != null)
         {
-            Destroy(this.gameObject);
-            return;
+            Destroy(Instance.gameObject);
+            Instance = null;
         }
         Instance = this;
 
@@ -71,7 +71,11 @@ public class BackpackManager : MonoBehaviour
         }
         PlayAudioClip(pushIn);
     }
-    
+    private void OnDestroy()
+    {
+        InteractionLogic.Instance.CollectedInBackpack -= PushStuffInBackPack;
+        Instance = null;
+    }
     #endregion
 }
 
