@@ -78,12 +78,12 @@ public class InteractionLogic
             case StuffEnum.公告栏:
             case StuffEnum.卫生间纸条:
             case StuffEnum.配电室牌:
+            case StuffEnum.碗:
                 checkStuff?.Invoke(stuffEnum);
                 break;
             case StuffEnum.狗狗防疫本:
             case StuffEnum.座机:
             case StuffEnum.亮光的电脑:
-            case StuffEnum.碗:
             case StuffEnum.暖壶:
             case StuffEnum.台灯:
             case StuffEnum.门锁:
