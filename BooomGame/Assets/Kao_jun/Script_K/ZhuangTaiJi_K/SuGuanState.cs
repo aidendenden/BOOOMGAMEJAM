@@ -80,7 +80,7 @@ public class WalkState : IState
     {
 
         _parameter.naw.SetDestination(_parameter.WalkPoints[walkPosition].position);
-        Debug.Log(walkPosition);
+        //Debug.Log(walkPosition);
         if (Vector3.Distance(manager.transform.position, _parameter.WalkPoints[walkPosition].position) < .2f){
 
             walkPosition++;
@@ -88,7 +88,7 @@ public class WalkState : IState
             {
                 walkPosition = 0;
             }
-            Debug.Log(walkPosition);
+            //Debug.Log(walkPosition);
             manager.TransitionState(StateType.Idle);
         }
 
