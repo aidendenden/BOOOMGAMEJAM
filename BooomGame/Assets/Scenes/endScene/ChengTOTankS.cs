@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ChengTOTankS : MonoBehaviour
 {
-    private Animator animator; // 渐变动画控制器组件
+    public Animator animator; // 渐变动画控制器组件
     public GameObject image0;
     public GameObject image1;
 
