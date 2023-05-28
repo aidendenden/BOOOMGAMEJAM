@@ -53,8 +53,7 @@ public class BackpackUIView : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         for (int i = 0; i < backpackStuffItemViews?.Count; i++)
         {
-            
-            if (itemIdList.Count > 0 && itemIdList.Count -1 >= i)
+            if (itemIdList.Count > 0 && itemIdList.Count -1 >= i && itemIdList[i] != StuffEnum.狗骨头)
             {
                 StuffInfo stuffInfo = StuffInfo.GetStuffInfo(itemIdList[i]);
                 backpackStuffItemViews[i].SetStuffItemInfo(stuffInfo);

@@ -140,7 +140,6 @@ public class BooomGameUIManager : MonoBehaviour
                     StartCoroutine(ShowStuffDetails(item));
                 }
                 audioSource.PlayOneShot(showDetail);
-                curStuff = stuffEnum;
                 break;
             case StuffEnum.狗狗防疫本:
             case StuffEnum.座机:
@@ -160,21 +159,29 @@ public class BooomGameUIManager : MonoBehaviour
             case StuffEnum.盆栽:
             case StuffEnum.猫:
             case StuffEnum.洗手间:
+                ShowText(stuffEnum);
+                break;
             case StuffEnum.电闸:
                 //展示文案
-                var info = StuffInfo.GetStuffInfo(stuffEnum);
-                if (info != null)
-                {
-                    StartCoroutine(ShowStuffDetailInfo(info));
-                }
-                curStuff = stuffEnum;
+                ShowText(stuffEnum);
                 break;
             case StuffEnum.密码锁:
                 confirmPassword.SetActive(true);
                 break;
         }
+        curStuff = stuffEnum;
         GameManager.IsInteracting = 1;
     }
+
+    public void ShowText(StuffEnum stuffEnum)
+    {
+        var info = StuffInfo.GetStuffInfo(stuffEnum);
+        if (info != null)
+        {
+            StartCoroutine(ShowStuffDetailInfo(info));
+        }
+    }
+    
     public IEnumerator ShowStuffDetailInfo(StuffInfo item)
     {
         stuffInfoContent.SetActive(true);
