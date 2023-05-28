@@ -97,6 +97,8 @@ public class InteractionLogic
             case StuffEnum.晾衣叉子:
             case StuffEnum.密码锁:
             case StuffEnum.盆栽:
+            case StuffEnum.电闸:
+            case StuffEnum.洗手间:
                 checkStuff?.Invoke(stuffEnum);
                 break;
             default:
