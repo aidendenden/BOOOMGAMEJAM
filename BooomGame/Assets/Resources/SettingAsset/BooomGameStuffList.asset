@@ -137,7 +137,7 @@ MonoBehaviour:
     canCollectedInBackpack: 0
   - stuffType: 21
     stuffName: "\u5FAE\u578B\u5BF9\u730E\u9B54\u4EBA\u5B9D\u5177"
-    describe: "\u4F20\u8BF4\u4E2D\u53EF\u4EE5\u514B\u5236\u730E\u9B54\u4EBA\u7684\u7528\u54C1\r\n\u4F46\u5C3A\u5BF8\u4F3C\u4E4E\u4E0D\u662F\u5F88\u6B63\u5E38\r\n\u4E0D\u6E05\u695A\u5177\u4F53\u7684\u7528\u9014"
+    describe: "\u55B5\uFF01\uFF01"
     detailsPicture: {fileID: 0}
     stuffIcon: {fileID: 0}
     canCollectedInBackpack: 0
