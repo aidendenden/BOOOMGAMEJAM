@@ -21,6 +21,7 @@ public sealed class GameManager : MonoBehaviour
     {
         get { return Lazy.Value; }
     }
+
     /// <summary>
     /// 正确密码
     /// </summary>
@@ -33,7 +34,7 @@ public sealed class GameManager : MonoBehaviour
     {
         set
         {
-            if (value==2)
+            if (value == 2)
             {
                 MiMaSuo = GameObject.FindGameObjectWithTag("MiMaSuo").transform;
                 ChangeAlertnessValue(1000,MiMaSuo);
@@ -48,11 +49,13 @@ public sealed class GameManager : MonoBehaviour
     /// </summary>
     public static int IsInteracting = 0;
 
-    public static float AlertnessMax = 100;//警觉度上限
+    public static float AlertnessMax = 100; //警觉度上限
     public static float AlertnessValue; //警觉度
-    public static float AlertnessDownSpeed = 0.5f;//警觉度下降速度
-    public static float BiaoZhunDistance = 15;//距离声源的标准距离
+    public static float AlertnessDownSpeed = 0.5f; //警觉度下降速度
+    public static float BiaoZhunDistance = 15; //距离声源的标准距离
 
+    public bool isGetDogBone;
+    
     public static Transform SuGuant;
     public static Transform MiMaSuo;
     public static int _unLockState;
@@ -63,27 +66,30 @@ public sealed class GameManager : MonoBehaviour
 
 
     #region 物品列表
+
     private static StuffList stuffList;
+
     /// <summary>
     /// 物品列表
     /// </summary>
-    public static StuffList StuffList 
+    public static StuffList StuffList
     {
-        get 
+        get
         {
-            if (stuffList == null )
+            if (stuffList == null)
             {
                 stuffList = Resources.Load<StuffList>("SettingAsset/BooomGameStuffList");
             }
+
             return stuffList;
         }
     }
+
     #endregion
 
 
-    public static void ChangeAlertnessValue(float value,Transform _t)
+    public static void ChangeAlertnessValue(float value, Transform _t)
     {
-        
         if (AlertnessValue < AlertnessMax)
         {
             float AlertnessWillAdd = value * GameManager.JudgmentDistance(_t);
@@ -98,13 +104,13 @@ public sealed class GameManager : MonoBehaviour
             }
         }
     }
-    
+
     public static float JudgmentDistance(Transform WuPinT)
     {
         SuGuant = GameObject.FindGameObjectWithTag("SuGuan").GetComponent<Transform>();
-        float distance = Vector3.Distance(WuPinT.position,SuGuant.position);
+        float distance = Vector3.Distance(WuPinT.position, SuGuant.position);
         Debug.Log(BiaoZhunDistance / (BiaoZhunDistance / 2 + distance));
-        return BiaoZhunDistance / (BiaoZhunDistance/2+distance);
+        return BiaoZhunDistance / (BiaoZhunDistance / 2 + distance);
     }
 }
 

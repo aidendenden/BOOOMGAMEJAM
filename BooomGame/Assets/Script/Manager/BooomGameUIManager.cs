@@ -28,7 +28,7 @@ public class BooomGameUIManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        DontDestroyOnLoad(this);
+        // DontDestroyOnLoad(this);
 
         closeDetailsBtn.onClick.AddListener(() => CloseStuffDetail(curStuff));
         stuffDetailCloseBtn.onClick.AddListener(() => 
