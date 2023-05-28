@@ -1,4 +1,5 @@
 # BOOOMGAMEJAM
 爆造~！一起来做游戏
 三点雅悟
-/n https://www.gcores.com/games/105371
+ 
+https://www.gcores.com/games/105371
