@@ -20314,7 +20314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameItem: 27
-  triggerType: 1
+  triggerType: 2
   OnTrigger: 0
   OnClick: 1
 --- !u!212 &1662192716
