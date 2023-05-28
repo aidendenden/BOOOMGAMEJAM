@@ -159,13 +159,11 @@ public class BooomGameUIManager : MonoBehaviour
             case StuffEnum.盆栽:
             case StuffEnum.猫:
             case StuffEnum.洗手间:
+                ShowText(stuffEnum);
+                break;
             case StuffEnum.电闸:
                 //展示文案
-                var info = StuffInfo.GetStuffInfo(stuffEnum);
-                if (info != null)
-                {
-                    StartCoroutine(ShowStuffDetailInfo(info));
-                }
+                ShowText(stuffEnum);
                 break;
             case StuffEnum.密码锁:
                 confirmPassword.SetActive(true);
@@ -174,6 +172,16 @@ public class BooomGameUIManager : MonoBehaviour
         curStuff = stuffEnum;
         GameManager.IsInteracting = 1;
     }
+
+    public void ShowText(StuffEnum stuffEnum)
+    {
+        var info = StuffInfo.GetStuffInfo(stuffEnum);
+        if (info != null)
+        {
+            StartCoroutine(ShowStuffDetailInfo(info));
+        }
+    }
+    
     public IEnumerator ShowStuffDetailInfo(StuffInfo item)
     {
         stuffInfoContent.SetActive(true);
