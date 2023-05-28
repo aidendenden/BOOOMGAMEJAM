@@ -19,7 +19,16 @@ public class AlertnessLogic : MonoBehaviour, IPointerClickHandler
     {
         _ThisT = gameObject.transform;
         audioSource = gameObject.GetComponent<AudioSource>();
-        audioSource.clip = collisionSound;
+
+
+        if (gameObject.TryGetComponent<AudioClip>(out collisionSound))
+        {
+            Debug.Log("AudioClip: " + collisionSound.name);
+        }
+        else
+        {
+            Debug.Log("Could not find AudioClip component");
+        }
 
     }
 

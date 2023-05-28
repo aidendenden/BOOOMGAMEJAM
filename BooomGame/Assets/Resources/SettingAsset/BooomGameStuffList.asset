@@ -69,7 +69,7 @@ MonoBehaviour:
     canCollectedInBackpack: 0
   - stuffType: 10
     stuffName: "DNA\u6FC0\u6D3B\u7B26\u53F7"
-    describe: "\u5531\u8DF3\r\nRap\r\n\u7BEE\u7403"
+    describe: "\u5FC5\u987B\u5207\u65AD...\u7535\u529B\u7CFB\u7EDF"
     detailsPicture: {fileID: 0}
     stuffIcon: {fileID: 0}
     canCollectedInBackpack: 0
