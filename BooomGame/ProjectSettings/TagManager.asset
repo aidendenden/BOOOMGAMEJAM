@@ -8,6 +8,7 @@ TagManager:
   - Tui
   - HuanJin
   - OutPoint
+  - MiMaSuo
   layers:
   - Default
   - TransparentFX

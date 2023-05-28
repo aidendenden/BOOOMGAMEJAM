@@ -35,9 +35,11 @@ public sealed class GameManager : MonoBehaviour
         {
             if (value==2)
             {
-                ChangeAlertnessValue(500,null);
+                MiMaSuo = GameObject.FindGameObjectWithTag("MiMaSuo").transform;
+                ChangeAlertnessValue(1000,MiMaSuo);
+                _unLockState = value;
             }
-            UnlockState = value;
+            _unLockState = value;
         }        
     } 
 
@@ -52,10 +54,13 @@ public sealed class GameManager : MonoBehaviour
     public static float BiaoZhunDistance = 15;//距离声源的标准距离
 
     public static Transform SuGuant;
+    public static Transform MiMaSuo;
+    public static int _unLockState;
 
-   
 
-   
+
+
+
 
     #region 物品列表
     private static StuffList stuffList;
