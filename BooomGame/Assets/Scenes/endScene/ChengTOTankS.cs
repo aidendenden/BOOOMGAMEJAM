@@ -36,7 +36,7 @@ public class ChengTOTankS : MonoBehaviour
         if (a)
         {
             a = false;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
 
         if (b)

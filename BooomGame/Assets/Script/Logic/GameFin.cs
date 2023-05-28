@@ -16,7 +16,7 @@ public class GameFin : MonoBehaviour
         if (a)
         {
             a = false;
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
 
         }
     }
