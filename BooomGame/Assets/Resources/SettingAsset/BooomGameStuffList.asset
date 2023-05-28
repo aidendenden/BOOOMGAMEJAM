@@ -40,7 +40,7 @@ MonoBehaviour:
   - stuffType: 5
     stuffName: "\u751F\u547D\u4F53\u5F81\u7EF4\u6301\u7528\u5177X2"
     describe: "\u6210\u5BF9\u5BB9\u5668\uFF0C\u5BB9\u91CF\u4E0D\u5927\r\n\u53EF\u4EE5\u7528\u4E8E\u6444\u5165\u7EF4\u6301\u751F\u547D\u4F53\u5F81\u6240\u9700\u7684\u80FD\u91CF\r\n\u671F\u5F85\u7740\u5B83\u4EEC\u88AB\u88C5\u6EE1\u7684\u65F6\u523B"
-    detailsPicture: {fileID: 0}
+    detailsPicture: {fileID: 21300000, guid: 56d76e2aa5bde6f4c96300ebc46ea729, type: 3}
     stuffIcon: {fileID: 0}
     canCollectedInBackpack: 0
   - stuffType: 6
