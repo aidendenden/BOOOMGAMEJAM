@@ -6,6 +6,7 @@ public class ListenShouJi : MonoBehaviour
 {
     public GameObject thisSelf;
     public int itemID;
+    Transform Mao;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,16 @@ public class ListenShouJi : MonoBehaviour
         {
             if (message == "to touch" && (int)item == itemID)
             {
-                GameObject.Destroy(thisSelf);
+                if (itemID==21)
+                {
+                    Mao = GameObject.FindGameObjectWithTag("Mao").transform;
+                    GameManager.ChangeAlertnessValue(1000, Mao);
+                    GameObject.Destroy(thisSelf);
+                }
+                else {
+                    GameObject.Destroy(thisSelf);
+                }
+                
 
             }
 
