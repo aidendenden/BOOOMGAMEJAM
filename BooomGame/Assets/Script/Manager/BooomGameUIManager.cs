@@ -140,7 +140,6 @@ public class BooomGameUIManager : MonoBehaviour
                     StartCoroutine(ShowStuffDetails(item));
                 }
                 audioSource.PlayOneShot(showDetail);
-                curStuff = stuffEnum;
                 break;
             case StuffEnum.狗狗防疫本:
             case StuffEnum.座机:
@@ -167,12 +166,12 @@ public class BooomGameUIManager : MonoBehaviour
                 {
                     StartCoroutine(ShowStuffDetailInfo(info));
                 }
-                curStuff = stuffEnum;
                 break;
             case StuffEnum.密码锁:
                 confirmPassword.SetActive(true);
                 break;
         }
+        curStuff = stuffEnum;
         GameManager.IsInteracting = 1;
     }
     public IEnumerator ShowStuffDetailInfo(StuffInfo item)
