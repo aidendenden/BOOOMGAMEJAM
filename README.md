@@ -1,4 +1,4 @@
-# No-Toilet
+# 禁止如厕---No-Toilet
 2023-机核网Booom爆造参赛作品
 
 具体页面：
