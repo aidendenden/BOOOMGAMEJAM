@@ -8502,6 +8502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 520778334}
   - component: {fileID: 520778333}
+  - component: {fileID: 520778335}
   m_Layer: 0
   m_Name: CeSuo (4)
   m_TagString: Untagged
@@ -8576,6 +8577,19 @@ Transform:
   m_Father: {fileID: 1030155516}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &520778335
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520778332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.0237513, y: 2.0359926, z: 2.67}
+  m_Center: {x: -0.00000011920929, y: -0.000000059604645, z: 0.0000009536743}
 --- !u!1001 &529093666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17478,7 +17492,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374092401}
-  m_LocalRotation: {x: -0.0012128735, y: -0.015528352, z: -0.00001883621, w: 0.9998787}
+  m_LocalRotation: {x: -0.0012128534, y: -0.015528318, z: -0.000018835859, w: 0.9998787}
   m_LocalPosition: {x: -197.33, y: 4.85, z: 24.199999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
